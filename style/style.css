@@ -1,5 +1,66 @@
-.test {
-  font-size: 300px;
-  text-align: center;
-  color: pink;
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("./../images/Approxinoscopefont.svg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+header {
+  border-bottom: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #9747FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+body header .headerTitle {
+  width: 33.3333333333%;
+  display: flex;
+  justify-content: center;
+  font-family: "Fascinate Inline", system-ui;
+  font-size: 42px;
+  color: white;
+}
+
+header div {
+  width: 33.3333333333%;
+}
+
+header ul {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0;
+  font-family: "Fascinate Inline", system-ui;
+  font-size: 30px;
+  color: white;
+}
+
+header ul li {
+  padding: 0 50px 0 0;
+  list-style: none;
+  color: black;
+}
+
+.buttonHover:hover {
+  transform: scale(1.1);
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
