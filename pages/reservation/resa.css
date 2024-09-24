@@ -1,10 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 h2 {
+  font-size: 26px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
   display: flex;
   justify-content: center;
+  font-size: 80px;
+  margin: 23vh 0px -15px 0px;
 }
 
 p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
   display: flex;
   justify-content: center;
   margin-bottom: -15px;
+}
+
+button {
+  border: 0.2rem solid #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #3AF4FF;
+}
+
+.bouton {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=resa.css.map */
