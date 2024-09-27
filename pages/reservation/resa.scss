@@ -33,6 +33,14 @@ button {
 }
 
 .formulaire {
+
+    @include neonBottom($colorPurple);
+    background-color: $colorPurple;
+    margin: 0 auto;
+    padding: 25px 0;
+    border-radius: 15px;
+    width: 65%;
+
     display: flex;
     justify-content: center;
     margin-top: 75px;
@@ -66,6 +74,10 @@ button {
             border-radius: 10px;
         }
 
+        textarea {
+            resize: none;
+          }
+
         .checkBox {
             font-style: italic;
             text-decoration: underline;
@@ -81,30 +93,49 @@ button {
             }
         }
 
+        
+
         button {
             margin: 0 auto;
         }
 }
 
-.popUp {
+#successPop{
+    .popUp {
+        opacity: 100%;
+        @include neonBottom($colorPurple);
+        margin: 0 auto;
+        height: 50vh;
+        width: 50vw;
+        background-color: $colorPurple;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2 {
+            @include title(80px, white);
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px
+        }
     
-    height: 50vh;
-    width: 50vw;
-    background-color: $colorPurple;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        p{
+            @include mainText(white);
+            margin-bottom: 55px;
+            margin-top: 10px;
+        }
     
-    h2 {
-        @include title(80px, white);
+        button {
+            @include button1();
+            margin-bottom: 15px;
+        }
+    
+    
     }
+}
 
-    p{
-        @include mainText(white);
-    }
 
-    button {
-        @include button1();
-    }
+.displayNone{
+    display: none !important;
 }
