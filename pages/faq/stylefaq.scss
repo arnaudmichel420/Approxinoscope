@@ -76,8 +76,12 @@ h2{
     } 
 }
 .buttonBackUp{
+    @include neonBottom($colorPurple);
     @include button1();
-    background-color: $colorPurple;
+    background-color: rgb(95, 7, 167);
+    display: block;
+    width: fit-content;
+    margin: 100px auto;
 }
 
 
