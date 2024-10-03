@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("./../images/Approxinoscopefont.svg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.desktopHeader {
+  border-bottom: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(95, 7, 167);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.desktopHeader .headerLogo {
+  width: 33.3333333333%;
+}
+.desktopHeader .headerLogo img {
+  margin-left: 50px;
+}
+.desktopHeader .headerTitle {
+  width: 33.3333333333%;
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+}
+.desktopHeader ul {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0;
+  font-family: "Fascinate Inline", system-ui;
+  font-size: 30px;
+  color: white;
+}
+.desktopHeader ul li {
+  padding: 0 50px 0 0;
+}
+
+.buttonHover:hover {
+  transform: scale(1.1);
+}
+
+.mobileHeaderUp {
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(95, 7, 167);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileHeaderUp .headerTitle {
+  font-size: 28px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+}
+.mobileHeaderUp .burgerHeader {
+  margin-right: 20px;
+}
+.mobileHeaderUp a:active {
+  transform: scale(1.1);
+}
+.mobileHeaderUp .burgerHeader:active {
+  transform: scale(1.1);
+}
+
+.mobileHeaderDown {
+  font-size: 20px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+  background-color: rgb(95, 7, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.mobileHeaderDown div {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.mobileHeaderDown ul li {
+  padding: 10px 0;
+}
+
+.newInfo {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: #001D32;
+  overflow: hidden;
+  height: 50px;
+  z-index: -10;
+  position: relative;
+}
+.newInfo p {
+  transform: translateX(100%);
+  white-space: nowrap;
+  animation: textDefile 25s linear infinite;
+}
+
+@keyframes textDefile {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+footer .footerUp {
+  height: 300px;
+  background-color: rgb(95, 7, 167);
+  display: flex;
+  align-items: center;
+}
+footer .footerUp .line {
+  width: 2px;
+  height: 80%;
+  background-color: white;
+  margin: 0 20px;
+}
+footer .footerUp .footerDiv {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footerUp .footerDiv ul li:hover {
+  transform: scale(1.1);
+}
+footer .footerUp .sectionFooter1 ul {
+  margin-top: 20px;
+  display: flex;
+}
+footer .footerUp .sectionFooter1 ul li {
+  padding: 0 25px;
+  transform: scale(1.4);
+}
+footer .footerUp .sectionFooter1 ul li:hover {
+  transform: scale(1.6);
+}
+footer .footerUp .sectionFooter2 h2 {
+  font-size: 40px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+}
+footer .footerUp .sectionFooter2 p {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+}
+footer .footerUp .sectionFooter3 ul li {
+  font-size: 24px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+footer .footerUp .sectionFooter3 div {
+  height: 2px;
+  width: 50%;
+  background-color: white;
+  margin: 30px 0;
+}
+footer .footerUp .sectionFooter3 .ul2 li {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+footer .footerUp .copyright {
+  margin: 0;
+  height: 50px;
+  background-color: black;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .desktopHeader {
+    display: none;
+  }
+  footer .footerUp {
+    padding: 20px 0;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer .footerUp .line {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 20px 0;
+  }
+  footer .footerUp .footerDiv {
+    width: 100%;
+  }
+  footer .footerUp .footerDiv ul li:hover {
+    transform: scale(1.4);
+  }
+  footer .footerUp .footerDiv ul li:active {
+    transform: scale(1.6);
+  }
+}
+@media screen and (max-width: 1050px) {
+  .desktopHeader ul {
+    font-size: 24px;
+  }
+  .desktopHeader .headerTitle {
+    font-size: 30px;
+  }
+  footer .footerUp .sectionFooter2 h2 {
+    font-size: 24px;
+  }
+  footer .footerUp .sectionFooter1 ul li {
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 701px) {
+  .mobileHeader {
+    display: none;
+  }
+}
+.displayNone {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+main {
+  margin: 100px 100px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+.presentation {
+  border-bottom: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  margin: 0 auto 100px auto;
+  background-color: rgb(95, 7, 167);
+  width: 70%;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.presentation h1 {
+  font-size: 30px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+}
+.presentation h2 {
+  font-size: 24px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+}
+.presentation div {
+  width: 48%;
+}
+.presentation div p span {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.presentation .presentationImage {
+  margin-left: 20px;
+}
+.presentation .presentationImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.presentation .presentationImage p {
+  text-align: center;
+}
+
+h2, h3 {
+  font-size: 50px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 50px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+}
+.card .cardMain {
+  width: 300px;
+  height: 400px;
+  background-color: rgb(95, 7, 167);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.card .cardMain img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 280px;
+  height: 300px;
+  border-radius: 10px;
+}
+.card .cardMain h2 {
+  font-size: 30px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0;
+}
+.card .cardSecond {
+  height: 350px;
+  width: 250px;
+  background-color: black;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: scale(0);
+  transform: translateX(-250px);
+  transition: all 500ms;
+}
+.card .cardSecond div {
+  background-color: white;
+  height: 1px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.card .cardSecond h2 {
+  font-size: 20px;
+  font-family: "Fascinate Inline", system-ui;
+  color: white;
+  margin: 20px 0px 0px 20px;
+  display: flex;
+}
+.card .cardSecond p {
+  margin: 15px 10px 15px 20px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.card .cardSecond ul {
+  width: 200px;
+}
+.card .cardSecond ul li {
+  list-style: disc;
+  list-style-position: inside;
+  padding: 10px 0px 10px 20px;
+}
+.card .cardSecond a {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(95, 7, 167);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 200ms;
+  margin: 10px auto 20px auto;
+}
+.card .cardMain:hover + .cardSecond {
+  border-right: 0.2rem solid white;
+  border-top: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  transform: scale(1);
+  transform: translateX(0);
+}
+.card .cardSecond:hover {
+  border-right: 0.2rem solid white;
+  border-top: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  transform: scale(1);
+  transform: translateX(0);
+}
+
+.card:nth-child(1) .cardMain:hover img {
+  content: url("./../images/eleves/Amelie2.jpg");
+}
+
+.card:nth-child(2) .cardMain:hover img {
+  content: url("./../images/eleves/Antonin2.jpg");
+}
+
+.card:nth-child(3) .cardMain:hover img {
+  content: url("./../images/eleves/Arnaud2.jpg");
+}
+
+.card:nth-child(4) .cardMain:hover img {
+  content: url("./../images/eleves/Arthur2.jpg");
+}
+
+.card:nth-child(5) .cardMain:hover img {
+  content: url("./../images/eleves/Chiara2.jpg");
+}
+
+.card:nth-child(6) .cardMain:hover img {
+  content: url("./../images/eleves/Elise2.jpg");
+}
+
+.card:nth-child(7) .cardMain:hover img {
+  content: url("./../images/eleves/Imane2.jpg");
+}
+
+.card:nth-child(8) .cardMain:hover img {
+  content: url("./../images/eleves/Jade2.jpg");
+}
+
+.card:nth-child(9) .cardMain:hover img {
+  content: url("./../images/eleves/Joey2.jpg");
+}
+
+.card:nth-child(10) .cardMain:hover img {
+  content: url("./../images/eleves/Killian2.jpg");
+}
+
+.card:nth-child(11) .cardMain:hover img {
+  content: url("./../images/eleves/Lila2.jpg");
+}
+
+.card:nth-child(12) .cardMain:hover img {
+  content: url("./../images/eleves/Lou2.jpg");
+}
+
+.card:nth-child(13) .cardMain:hover img {
+  content: url("./../images/eleves/Margaux2.jpg");
+}
+
+.card:nth-child(14) .cardMain:hover img {
+  content: url("./../images/eleves/Mathys2.jpg");
+}
+
+.card:nth-child(15) .cardMain:hover img {
+  content: url("./../images/eleves/Maude2.jpg");
+}
+
+.card:nth-child(16) .cardMain:hover img {
+  content: url("./../images/eleves/Noah2.jpg");
+}
+
+.card:nth-child(17) .cardMain:hover img {
+  content: url("./../images/eleves/Quentin2.jpg");
+}
+
+.card:nth-child(18) .cardMain:hover img {
+  content: url("./../images/eleves/Simon2.jpg");
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+#randomStudentButton {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgb(95, 7, 167);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 200ms;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 30px auto;
+}/*# sourceMappingURL=styleaccueil.css.map */

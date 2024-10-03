@@ -5,6 +5,7 @@ $mainFont: "Roboto", sans-serif;
 $titleFont: "Fascinate Inline", system-ui;
 $colorBlue: #001d32;
 $colorPurple: #9747ff;
+$colorPurpleDark: rgb(95, 7, 167);
 $colorLightBlue: #3af4ff;
 
 @mixin mainText($fontColor) {
@@ -19,12 +20,17 @@ $colorLightBlue: #3af4ff;
   color: $fontColor;
 }
 
-@mixin button1() {
-  border: 0.2rem solid #fff;
+@mixin button1($color) {
+  border: 2px solid #fff;
   padding: 10px 20px;
+  display: block;
   width: fit-content;
   border-radius: 10px;
-  background-color: $colorLightBlue;
+  background-color: $color;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 200ms;
 }
 
 @mixin neonBottom($color) {
@@ -35,10 +41,19 @@ $colorLightBlue: #3af4ff;
     inset 0 0 8rem $color;
 }
 
+@mixin neonLeft($color) {
+  border-right: 0.2rem solid white;
+  border-top: 0.2rem solid white;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem $color, 0 0 1rem white,
+    0 0 1rem $color, 0 0 2rem white, 0 0 2rem $color, 0 0 0.8rem $color,
+    0 0 2.8rem $color, 0 0 4rem $color, 0 0 5rem $color, 0 0 6rem $color,
+    inset 0 0 8rem $color;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-image: url("./../../images/Approxinoscopefont.svg");
+  background-image: url("./../images/Approxinoscopefont.svg");
   background-size: 100%;
   background-repeat: repeat-y;
 }
@@ -71,14 +86,16 @@ li {
   margin: 0;
   height: 100px;
   width: 100%;
-  background-color: $colorPurple;
+  background-color: $colorPurpleDark;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   .headerLogo {
     width: calc(100% / 3);
-    padding-left: 50px;
+    img {
+      margin-left: 50px;
+    }
   }
   .headerTitle {
     width: calc(100% / 3);
@@ -103,7 +120,6 @@ li {
 
 .buttonHover:hover {
   transform: scale(1.1);
-  display: flex;
 }
 
 .mobileHeaderUp {
@@ -111,7 +127,7 @@ li {
   margin: 0;
   height: 100px;
   width: 100%;
-  background-color: $colorPurple;
+  background-color: $colorPurpleDark;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,7 +147,7 @@ li {
 
 .mobileHeaderDown {
   @include title(20px, white);
-  background-color: $colorPurple;
+  background-color: $colorPurpleDark;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,95 +164,118 @@ li {
   }
 }
 
-footer article {
-  height: 300px;
-  background-color: $colorPurple;
-  display: flex;
-  align-items: center;
-  div {
-    width: 2px;
-    height: 80%;
-    background-color: white;
-    margin: 0 20px;
-  }
-  section {
-    width: calc(100% / 3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    ul li:hover {
-      transform: scale(1.1);
-    }
-  }
-  .sectionFooter1 {
-    ul {
-      margin-top: 20px;
-      display: flex;
-      li {
-        padding: 0 25px;
-        transform: scale(1.4);
-      }
-    }
-    ul li:hover {
-      transform: scale(1.6);
-    }
-  }
-  .sectionFooter2 {
-    h2 {
-      @include title(40px, white);
-    }
-    p {
-      @include mainText(white);
-      text-align: center;
-      justify-content: center;
-    }
-  }
-
-  .sectionFooter3 {
-    ul {
-      li {
-        @include title(24px, white);
-        padding: 5px 0;
-        text-align: center;
-      }
-    }
-    div {
-      height: 2px;
-      width: calc(100% / 2);
-      background-color: white;
-      margin: 30px 0;
-    }
-    .ul2 li {
-      @include mainText(white);
-    }
+.newInfo {
+  @include mainText(white);
+  background-color: $colorBlue;
+  overflow: hidden;
+  height: 50px;
+  z-index: -10;
+  position: relative;
+  p {
+    transform: translateX(100%);
+    white-space: nowrap;
+    animation: textDefile 25s linear infinite;
   }
 }
 
-.copyright {
-  margin: 0;
-  height: 50px;
-  background-color: black;
-  @include mainText(rgb(207, 207, 207));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@keyframes textDefile {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+footer {
+  .footerUp {
+    height: 300px;
+    background-color: $colorPurpleDark;
+    display: flex;
+    align-items: center;
+    .line {
+      width: 2px;
+      height: 80%;
+      background-color: white;
+      margin: 0 20px;
+    }
+    .footerDiv {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ul li:hover {
+        transform: scale(1.1);
+      }
+    }
+    .sectionFooter1 {
+      ul {
+        margin-top: 20px;
+        display: flex;
+        li {
+          padding: 0 25px;
+          transform: scale(1.4);
+        }
+      }
+      ul li:hover {
+        transform: scale(1.6);
+      }
+    }
+    .sectionFooter2 {
+      h2 {
+        @include title(40px, white);
+      }
+      p {
+        @include mainText(white);
+        text-align: center;
+      }
+    }
+
+    .sectionFooter3 {
+      ul {
+        li {
+          @include title(24px, white);
+          padding: 5px 0;
+          text-align: center;
+        }
+      }
+      div {
+        height: 2px;
+        width: calc(100% / 2);
+        background-color: white;
+        margin: 30px 0;
+      }
+      .ul2 li {
+        @include mainText(white);
+      }
+    }
+  }
+  .copyright {
+    margin: 0;
+    height: 50px;
+    background-color: black;
+    @include mainText(white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .desktopHeader {
     display: none;
   }
-  footer article {
+  footer .footerUp {
     padding: 20px 0;
     flex-direction: column;
     height: fit-content;
-    div {
+    .line {
       width: 80%;
       height: 2px;
       background-color: white;
       margin: 20px 0;
     }
-    section {
+    .footerDiv {
       width: 100%;
       ul li:hover {
         transform: scale(1.4);
@@ -257,10 +296,10 @@ footer article {
       font-size: 30px;
     }
   }
-  footer article .sectionFooter2 h2 {
+  footer .footerUp .sectionFooter2 h2 {
     font-size: 24px;
   }
-  footer article .sectionFooter1 ul li {
+  footer .footerUp .sectionFooter1 ul li {
     padding: 0 15px;
   }
 }
@@ -281,58 +320,4 @@ footer article {
 main {
   margin: 100px 100px;
   @include mainText(white);
-}
-
-.card {
-  display: flex;
-  align-items: flex-end;
-  .cardMain {
-    width: 300px;
-    height: 400px;
-    background-color: $colorPurple;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      object-fit: cover;
-      width: 280px;
-      height: 300px;
-      border-radius: 10px;
-    }
-    h2 {
-      @include title(30px, white);
-      margin: 10px 0;
-    }
-  }
-  .cardSecond {
-    height: 350px;
-    width: 200px;
-    background-color: black;
-    border-top-right-radius: 70%;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    ul li {
-      padding: 10px 20px;
-    }
-    button {
-      @include button1();
-      margin: 20px;
-    }
-    opacity: 0;
-    transition-duration: 1s;
-  }
-  .cardMain:hover + .cardSecond {
-    transition-duration: 1s;
-    opacity: 100;
-  }
-  .cardSecond:hover {
-    transition-duration: 1s;
-    opacity: 100;
-  }
 }
