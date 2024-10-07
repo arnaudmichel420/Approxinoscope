@@ -1,0 +1,164 @@
+@import "./../../style/style.scss";
+body {
+  background-image: url("./../../images/Approxinoscopefont.svg");
+}
+h1 {
+  text-align: center;
+  @include title(60px);
+  background-color: $colorPurpleDark;
+  border-radius:20px ;
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 0px auto;
+  animation: neonGlitch 2s ease 1 forwards;
+}
+
+.sectionEleve {
+  background-color: $colorPurpleDark;
+  width: 70%;
+  margin: 0px auto;
+  padding: 50px 30px;
+  border-radius: 20px;
+  /*@include neonBottom($colorPurple);*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px -3px 0 2px white,
+  3px -3px 10px 3px $colorLightBlue,
+  3px -3px 20px 4px rgba($color: $colorLightBlue, $alpha: 0.8),
+  3px -3px 30px 6px rgba($color: $colorLightBlue, $alpha: 0.4),
+  inset -1px 1px 10px 1px $colorLightBlue,
+  inset -1px 1px 5px 1px white,
+;
+  h2 {
+    @include title(30px);
+    margin: 0;
+  }
+  p{
+    margin: 20px 0 0 0;
+    text-align: justify;
+  }
+  &.sectionEleve1 {
+    justify-content: space-around;
+    img {
+      border-radius: 10px;
+    }
+    ul {
+      li {
+        margin: 10px 0;
+        @include title(24px);
+      }
+    }
+  }
+  &.sectionEleve2 {
+    flex-direction: column;
+    width: 50%;
+  }
+  &.sectionEleve3 {
+    flex-direction: column;
+    label {
+      display: flex;
+      align-self: flex-start;
+      margin: 30px 0;
+      font-size: 20px;
+      font-weight: 500;
+      z-index: 1;
+    }
+  }
+  &.sectionEleve4 {
+    flex-direction: column;
+    width: 50%;
+    a{
+      @include button1();
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 30px;
+      transition: all 200ms ease 200ms;
+    }
+  }
+}
+
+
+
+
+
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  @include neonLeft($colorPurple);
+  background-color: $colorLightBlue;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  border: 0;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 200ms ease 200ms;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(2);
+}
+
+.neonVertical {
+  display: flex;
+  margin: 0 auto;
+  width: 1px;
+  height:50px;
+  position: relative;
+  z-index: -1;
+  background-color: white;
+  border: 0.2rem solid white;
+  animation: neonVerticalGlitch 1s ease infinite;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem $colorLightBlue, 0 0 1rem white,
+    0 0 1rem $colorLightBlue, 0 0 2rem white, 0 0 2rem $colorLightBlue,
+    0 0 0.8rem $colorLightBlue, 0 0 2.8rem $colorLightBlue,
+    0 0 4rem $colorLightBlue, 0 0 5rem $colorLightBlue, 0 0 6rem $colorLightBlue,
+    
+}
+main{
+    margin: 0 100px ;
+}
+
+@keyframes neonGlitch {
+  0%,10%,20%,35%,55%,100% {
+    box-shadow: 3px -3px 0 2px white,
+    3px -3px 10px 3px $colorLightBlue,
+    3px -3px 20px 4px rgba($color: $colorLightBlue, $alpha: 0.8),
+    3px -3px 30px 6px rgba($color: $colorLightBlue, $alpha: 0.4),
+    inset -1px 1px 10px 1px $colorLightBlue,
+    inset -1px 1px 5px 1px white,
+  }
+  5%,15%,25%,45%,65%{
+      box-shadow: 3px -3px 0 2px white,
+      3px -3px 20px 3px $colorLightBlue,
+      3px -3px 40px 4px rgba($color: $colorLightBlue, $alpha: 0.8),
+      3px -3px 60px 6px rgba($color: $colorLightBlue, $alpha: 0.4),
+      inset -1px 1px 20px 1px $colorLightBlue,
+      inset -1px 1px 10px 1px white,
+    }
+}
+@media (prefers-reduced-motion) {
+  @keyframes neonGlitch{}
+  h1{
+    box-shadow: 3px -3px 0 2px white,
+    3px -3px 10px 3px $colorLightBlue,
+    3px -3px 20px 4px rgba($color: $colorLightBlue, $alpha: 0.8),
+    3px -3px 30px 6px rgba($color: $colorLightBlue, $alpha: 0.4),
+    inset -1px 1px 10px 1px $colorLightBlue,
+    inset -1px 1px 5px 1px white,
+  }
+}

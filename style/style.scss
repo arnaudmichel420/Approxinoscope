@@ -6,15 +6,16 @@ $titleFont : "Fascinate Inline", system-ui;
 $colorBlue : #001D32;
 $colorPurple : #9747FF;
 $colorLightBlue: #3AF4FF;
+$colorPurpleDark:rgb(95,7,167);
 
 
-@mixin mainText($fontColor){
+@mixin mainText($fontColor:white){
     font-size: 16px;
     font-family: $mainFont;
     color: $fontColor;
 }
 
-@mixin title($fontSize, $fontColor){
+@mixin title($fontSize, $fontColor:white){
     font-size: $fontSize;
     font-family: $titleFont;
     color: $fontColor;
