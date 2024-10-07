@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve ton B2</title>
+    <link rel="stylesheet" href="./resa.css">
+</head>
+<body>
+    <header>
+        <div class="desktopHeader">
+            <a class="headerLogo" href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
+            <a class="headerTitle buttonHover" href="./index.html">Approxinoscope</a>
+            <ul>
+                <li><a class="buttonHover" href="#about">FAQ</a></li>
+                <li><a class="buttonHeader buttonHover" href="#contact">Reserver</a></li>
+            </ul>
+        </div>
+ 
+        <div class="mobileHeader">
+            <div class="mobileHeaderUp">
+                <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
+                <a class="headerTitle" href="./index.html">Approxinoscope</a>
+                <img class="burgerHeader" src="./../../images/burger.svg" alt=""/>
+            </div>
+            <div class="mobileHeaderDown displayNone">
+                <div></div>
+                <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Réservation</a></li>
+                    <li><a href="">Page 3</a></li>
+                </ul>
+            </div>
+ 
+        </div>
+        <script>
+            const burger = document.querySelector('.burgerHeader');
+            burger.addEventListener('click',()=>{
+                const mobileHeaderDown = document.querySelector('.mobileHeaderDown').classList.toggle("displayNone");
+                burger.classList.toggle("rotate");
+            })
+        </script>
+    </header>
+
+    <main>
+        <h2 class="pageTitle2">Ici tu pourras reserver l'élève de ton choix</h2>
+        <p>Nous te prions de remplir ce formulaire ci-dessous :</p>
+        
+        <form class="formulaire" onsubmit="submitFormReturn(event)">
+            <ul>            
+            <li>
+                <label for="nom">Qui a tu choisi ? </label>
+                <input type="text" id="nom" name="nom" required minlength="4" maxlength="30" size=auto placeholder="Prénom du B2" required/>
+            </li>
+
+            <li>
+                <label for="horaire">Selectionne quand tu veux que l'élève vienne : </label>
+                <input id="horaire" type="time" name="horaire" min="21:42" max="08:12" required /> 
+            </li>
+
+            <li>
+                <label for="nom2">Ton prénom </label>
+                <input type="text" id="nom2" name="nom2" required minlength="4" maxlength="30" size=auto placeholder="Ton prénom ici" required/>
+            </li>
+
+            <li> 
+                <label for="sexe">Sexe ? </label>
+                <select required name="sexe" id="sexe">
+                <option classe="baseValue" value="baseValue">~~ Choisi ton sexe ~~</option>
+                <option value="1">1 fois par semaine</option>
+                <option value="2">J'ai oublié</option>
+                <option value="3">Femme</option>
+                <option value="4">C'est quoi une cuisse ?</option>
+                <option value="5">Homme</option>
+                <option value="6">Si vous proposez</option></select>
+            </li>
+
+            <li> 
+                <label for="paiement">Choisi ton moyen de paiement :</label>
+                <select required name="paiement" id="moyenPaiement">
+                <option classe="baseValue" value="baseValue">~~ Choisi ton moyen de paiement ~~</option>
+                <option value="carte">Carte bancaire</option>
+                <option value="paypal">Paypal</option>
+                <option value="ecu">En plein de pièces de 1 centime</option>
+                <option value="nature">En nature</option></select>
+            </li>
+
+            <li>
+                <label for="tel">Ton numéro de téléphone pour qu'on te rappel :</label>
+                <input type="tel" id="tel" name="tel" required placeholder="Ex : 06 12 34 56 78" />
+            </li>
+
+            <li>
+                <label for="text">Message à l'élève que tu vas reserver :</label>
+                <textarea id="text" name="text" rows="5" cols="33" placeholder="Un petit mot doux pour lui faire vachement plaisir !"></textarea>
+            </li>
+
+            <li class="checkB">
+                <label for="check">Accepter le fait qu'on soit les meilleurs et surtout nos <a class="checkBox" href="#"> conditions générales de vente</a></label>
+                <input type="checkbox" id="check" name="check" required>
+            </li>
+
+            <li>
+                <input type="submit"  id="submitButt" value="Reserver mon élève" />
+            </li>
+            </ul>
+
+        </form>
+        <div id="successPop" class="displayNone">
+           <div class="popUp">
+               <h2>Merci pour votre reservation</h2>
+               <p>Nous reviendrons vers vous aussi vite que speedy gonzales</p>
+               <a id="backHome" href="./../index.html">Retour à l'accueil</a>
+           </div>
+        </div>
+
+
+        <script>
+           function submitFormReturn(event){
+               event.preventDefault();
+               document.getElementById("successPop").classList.toggle("displayNone")
+           }
+        </script>
+
+    </main>
+
+    <footer>
+        <article>
+            <section class="sectionFooter1">
+                <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="100px" width="100px"/></a>
+                <ul>
+                    <li><a href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13" target="_blank"><img src="./../../images/amazon.svg" alt=""/></a></li>
+                    <li><a href="https://www.instagram.com/cailloux_de_compagnie/" target="_blank"><img src="./../../images/instagram.svg" alt=""/></a></li>
+                    <li><a href="https://www.evian.com/fr/hydratation/" target="_blank"><img src="./../../images/water.svg" alt=""/></a></li>
+                    <li><a href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30" target="_blank"><img src="./../../images/youtube.svg" alt=""/></a></li>
+ 
+                </ul>
+            </section>
+            <div></div>
+            <section class="sectionFooter2">
+                <h2>Approxinoscope</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit facere obcaecati error eligendi ipsam placeat deserunt fugiat. Aliquid odio nam qui blanditiis aperiam dolorum doloremque officiis, dicta ab aspernatur omnis!</p>
+            </section>
+            <div></div>
+            <section class="sectionFooter3">
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Réservation</a></li>
+                </ul>
+                <div></div>
+                <ul class="ul2">
+                    <li><a href="">Mentions légales</a></li>
+                    <li><a href="">Conditions générales de vente</a></li>
+                </ul>
+                    
+ 
+            </section>
+        </article>
+        <p class="copyright">© Tous droits réserves aux créateurs (les meilleurs)</p>
+    </footer>
+</body>
+</html>
