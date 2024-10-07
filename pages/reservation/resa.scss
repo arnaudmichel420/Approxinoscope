@@ -101,41 +101,46 @@ button {
 }
 
 #successPop{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     .popUp {
-        opacity: 100%;
         @include neonBottom($colorPurple);
         margin: 0 auto;
-        height: 50vh;
-        width: 50vw;
+        width: 50%;
         background-color: $colorPurple;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+       
         h2 {
             @include title(80px, white);
             text-align: center;
             margin-top: 50px;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
-    
+   
         p{
             @include mainText(white);
             margin-bottom: 55px;
             margin-top: 10px;
         }
-    
-        button {
+   
+        a {
             @include button1();
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
-    
-    
+   
+   
     }
-}
-
-
-.displayNone{
-    display: none !important;
-}
+ }
+ 

@@ -46,7 +46,7 @@
         <h2 class="pageTitle2">Ici tu pourras reserver l'élève de ton choix</h2>
         <p>Nous te prions de remplir ce formulaire ci-dessous :</p>
         
-        <form class="formulaire">
+        <form class="formulaire" onsubmit="submitFormReturn(event)">
             <ul>            
             <li>
                 <label for="nom">Qui a tu choisi ? </label>
@@ -104,21 +104,24 @@
                 <input type="submit"  id="submitButt" value="Reserver mon élève" />
             </li>
             </ul>
+
         </form>
         <div id="successPop" class="displayNone">
-            <div class="popUp">
-                <h2>Merci pour votre reservation</h2>
-                <p>nous reviendrons vers vous aussi vite que speedy gonzales</p>
-                <button>Retour à l'accueil</button>
-            </div>
+           <div class="popUp">
+               <h2>Merci pour votre reservation</h2>
+               <p>Nous reviendrons vers vous aussi vite que speedy gonzales</p>
+               <a id="backHome" href="./../index.html">Retour à l'accueil</a>
+           </div>
         </div>
 
+
         <script>
-            submitButt = document.getElementById("submitButt")
-            submitButt.addEventListener("click",()=>{
-                document.getElementById("successPop").classList.toggle("displayNone")
-            })
+           function submitFormReturn(event){
+               event.preventDefault();
+               document.getElementById("successPop").classList.toggle("displayNone")
+           }
         </script>
+
     </main>
 
     <footer>
