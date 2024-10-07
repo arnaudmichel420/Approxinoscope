@@ -1,146 +1,156 @@
 @import "./../../style/style.scss";
+body {
+  background-image: url("./../../images/Approxinoscopefont.svg");
+}
 
-.pageTitle { 
-    @include title(80px, white);
-    display: flex;
-    justify-content: center;
-    margin: 150px 0px -15px 0px;
+.pageTitle {
+  @include title(80px, white);
+  display: flex;
+  justify-content: center;
+  margin: 150px 0px -15px 0px;
 }
 
 p {
-    @include mainText(white);
-    display: flex;
-    justify-content: center;
-    margin-bottom: -15px;
+  @include mainText(white);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -15px;
 }
 
-button {
-    @include button1();
+.bouton a {
+  @include button1();
+  cursor: pointer;
+  transition: all 200ms ease 200ms;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $colorPurpleDark;
 }
 
 .bouton {
-    margin-top: 50px;
-    margin-bottom: 18vh;
-    display: flex;
-    justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 18vh;
+  display: flex;
+  justify-content: center;
 }
 
-.pageTitle2 { 
-    @include title(50px, white);
-    display: flex;
-    justify-content: center;
-    margin: 100px 0px -15px 0px;
+.pageTitle2 {
+  @include title(50px, white);
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px -15px 0px;
 }
 
 .formulaire {
+  @include neonBottom($colorPurple);
+  background-color: $colorPurpleDark;
+  margin: 0 auto;
+  padding: 50px 0;
+  border-radius: 15px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  flex-direction: column;
 
-    @include neonBottom($colorPurple);
-    background-color: $colorPurple;
-    margin: 0 auto;
-    padding: 25px 0;
-    border-radius: 15px;
-    width: 65%;
-
+  div {
     display: flex;
-    justify-content: center;
-    margin-top: 75px;
-    
-        ul li {
-            display: flex;
-            flex-direction: column;
-            margin: 15px 0 0 0;
-        }
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0 0 0 50px;
+    input {
+      width: fit-content;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+  }
 
-        label {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
+  .checkBox {
+    font-style: italic;
+    text-decoration: underline;
+  }
+  label {
+    font-size: 20px;
+    padding: 0;
+    margin: 0 0 0 50px;
+  }
 
-        input {
-            padding-left: 15px;
-            border-radius: 10px;
-            height: 30px;
-        }
+  input,
+  select,
+  textarea {
+    border-radius: 10px;
+    height: 30px;
+    width: 90%;
+    margin: 10px auto;
+    border: 1 solid black;
+  }
+  #submitButt {
+    @include button1();
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms ease 200ms;
+  }
+  textarea {
+    height: 100px;
+    resize: none;
+    margin-bottom: 20px;
+  }
 
-        select {
-            padding-left: 15px;
-            border-radius: 10px;
-            height: 30px;
-        }
-
-        #text {
-            padding-left: 15px;
-            padding-top: 5px;
-            border-radius: 10px;
-        }
-
-        textarea {
-            resize: none;
-          }
-
-        .checkBox {
-            font-style: italic;
-            text-decoration: underline;
-        }
-
-        .checkB {
-            display: flex;
-            flex-direction: row-reverse;
-
-            input {
-                width: 25px;
-                height: 25px;
-            }
-        }
-
-        
-
-        button {
-            margin: 0 auto;
-        }
+  button {
+    margin: 0 auto;
+  }
 }
 
-#successPop{
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    position: fixed;
+#successPop {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popUp {
+    @include neonBottom($colorPurple);
+    margin: 0 auto;
+    width: 50%;
+    background-color: $colorPurpleDark;
+    border-radius: 15px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    
-    .popUp {
-        @include neonBottom($colorPurple);
-        margin: 0 auto;
-        width: 50%;
-        background-color: $colorPurple;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       
-        h2 {
-            @include title(80px, white);
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-   
-        p{
-            @include mainText(white);
-            margin-bottom: 55px;
-            margin-top: 10px;
-        }
-   
-        a {
-            @include button1();
-            margin-bottom: 30px;
-        }
-   
-   
+
+    h2 {
+      @include title(80px, white);
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 20px;
     }
- }
- 
+
+    p {
+      @include mainText(white);
+      margin-bottom: 55px;
+      margin-top: 10px;
+    }
+
+    a {
+      @include button1();
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.displayNone {
+  display: none !important;
+}

@@ -1,163 +1,283 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reserve ton B2</title>
-    <link rel="stylesheet" href="./resa.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./resa.css" />
+    <link rel="icon" type="image/x-icon" href="./../../images/dog.svg" />
+  </head>
+  <body>
     <header>
-        <div class="desktopHeader">
-            <a class="headerLogo" href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
-            <a class="headerTitle buttonHover" href="./index.html">Approxinoscope</a>
-            <ul>
-                <li><a class="buttonHover" href="#about">FAQ</a></li>
-                <li><a class="buttonHeader buttonHover" href="#contact">Reserver</a></li>
-            </ul>
+      <div class="desktopHeader">
+        <a class="headerLogo" href="./../../index.html"
+          ><img
+            src="./../../images/dog.svg"
+            alt="Logo du site Approxinoscope"
+            height="80px"
+            width="80px"
+            class="logoHeader"
+        /></a>
+        <a class="headerTitle buttonHover" href="./../../index.html"
+          >Approxinoscope</a
+        >
+        <ul>
+          <li><a class="buttonHover" href="./../faq/faq.html">FAQ</a></li>
+          <li>
+            <a class="buttonHover" href="./../reservation/reservation.html"
+              >Reserver</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobileHeader">
+        <div class="mobileHeaderUp">
+          <a href="././../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt=""
+              height="80px"
+              width="80px"
+              class="logoHeader"
+          /></a>
+          <a class="headerTitle" href="./../../index.html">Approxinoscope</a>
+          <img class="burgerHeader" src="./../../images/burger.svg" alt="" />
         </div>
- 
-        <div class="mobileHeader">
-            <div class="mobileHeaderUp">
-                <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
-                <a class="headerTitle" href="./index.html">Approxinoscope</a>
-                <img class="burgerHeader" src="./../../images/burger.svg" alt=""/>
-            </div>
-            <div class="mobileHeaderDown displayNone">
-                <div></div>
-                <ul>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Réservation</a></li>
-                    <li><a href="">Page 3</a></li>
-                </ul>
-            </div>
- 
+        <div class="mobileHeaderDown displayNone">
+          <div></div>
+          <ul>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+            <li><a href="" class="randomStudent">Élèves aléatoire</a></li>
+          </ul>
         </div>
-        <script>
-            const burger = document.querySelector('.burgerHeader');
-            burger.addEventListener('click',()=>{
-                const mobileHeaderDown = document.querySelector('.mobileHeaderDown').classList.toggle("displayNone");
-                burger.classList.toggle("rotate");
-            })
-        </script>
+      </div>
+      <script>
+        const burger = document.querySelector(".burgerHeader");
+        burger.addEventListener("click", () => {
+          const mobileHeaderDown = document
+            .querySelector(".mobileHeaderDown")
+            .classList.toggle("displayNone");
+          burger.classList.toggle("rotate");
+        });
+      </script>
+      <div class="newInfo">
+        <p>
+          Promotion exceptionnelle de 15,35426% sur tout le site avec le code
+          <strong>GLYCOSYLPHOSPHATIDYLÉTHANOLAMINE*</strong
+          ><small>
+            --------------------------------------------------------------------------------
+            Offre valable uniquement de 12H35 UTC+8 à 12H38 UTC-6 sur les
+            produits dont la somme de l'intitulé du service est égal à 156,45²
+            (ex : massage auriculaire =
+            13+1+19+19+1+7+5+1+21+18+9+3+21+12+1+9+18+5=183≠156,45² pas de
+            promotion 😢)</small
+          >
+        </p>
+      </div>
     </header>
 
     <main>
-        <h2 class="pageTitle2">Ici tu pourras reserver l'élève de ton choix</h2>
-        <p>Nous te prions de remplir ce formulaire ci-dessous :</p>
-        
-        <form class="formulaire" onsubmit="submitFormReturn(event)">
-            <ul>            
-            <li>
-                <label for="nom">Qui a tu choisi ? </label>
-                <input type="text" id="nom" name="nom" required minlength="4" maxlength="30" size=auto placeholder="Prénom du B2" required/>
-            </li>
+      <h2 class="pageTitle2">Ici tu pourras reserver l'élève de ton choix</h2>
+      <p>Nous te prions de remplir ce formulaire ci-dessous :</p>
 
-            <li>
-                <label for="horaire">Selectionne quand tu veux que l'élève vienne : </label>
-                <input id="horaire" type="time" name="horaire" min="21:42" max="08:12" required /> 
-            </li>
+      <form class="formulaire" onsubmit="submitFormReturn(event)">
+        <label for="nom">Qui as-tu choisis ? </label>
+        <select required name="nom" id="nom" required>
+          <option classe="baseValue" value="baseValue">
+            ~~ Choisis ton élève ~~
+          </option>
+          <option value="1">Amélie</option>
+          <option value="2">Antonin</option>
+          <option value="3">Arnaud</option>
+          <option value="4">Arthur</option>
+          <option value="5">Chiara</option>
+          <option value="6">Elise</option>
+          <option value="7">Imane</option>
+          <option value="8">Jade</option>
+          <option value="9">Joey</option>
+          <option value="10">Killian</option>
+          <option value="11">Lila</option>
+          <option value="12">Lou</option>
+          <option value="13">Margot</option>
+          <option value="14">Mathys</option>
+          <option value="15">Maude</option>
+          <option value="16">Noah</option>
+          <option value="17">Quentin</option>
+          <option value="18">Simon</option>
+        </select>
 
-            <li>
-                <label for="nom2">Ton prénom </label>
-                <input type="text" id="nom2" name="nom2" required minlength="4" maxlength="30" size=auto placeholder="Ton prénom ici" required/>
-            </li>
+        <label for="horaire"
+          >Selectionnes quand tu veux que l'élève vienne :
+        </label>
+        <input
+          id="horaire"
+          type="time"
+          name="horaire"
+          min="21:42"
+          max="08:12"
+          required
+        />
 
-            <li> 
-                <label for="sexe">Sexe ? </label>
-                <select required name="sexe" id="sexe">
-                <option classe="baseValue" value="baseValue">~~ Choisi ton sexe ~~</option>
-                <option value="1">1 fois par semaine</option>
-                <option value="2">J'ai oublié</option>
-                <option value="3">Femme</option>
-                <option value="4">C'est quoi une cuisse ?</option>
-                <option value="5">Homme</option>
-                <option value="6">Si vous proposez</option></select>
-            </li>
+        <label for="nom2">Ton prénom </label>
+        <input
+          type="text"
+          id="nom2"
+          name="nom2"
+          required
+          minlength="4"
+          maxlength="30"
+          size="auto"
+          placeholder="Ton prénom ici"
+          required
+        />
 
-            <li> 
-                <label for="paiement">Choisi ton moyen de paiement :</label>
-                <select required name="paiement" id="moyenPaiement">
-                <option classe="baseValue" value="baseValue">~~ Choisi ton moyen de paiement ~~</option>
-                <option value="carte">Carte bancaire</option>
-                <option value="paypal">Paypal</option>
-                <option value="ecu">En plein de pièces de 1 centime</option>
-                <option value="nature">En nature</option></select>
-            </li>
+        <label for="sexe">Sexe ? </label>
+        <select required name="sexe" id="sexe">
+          <option classe="baseValue" value="baseValue">
+            ~~ Choisi ton sexe ~~
+          </option>
+          <option value="1">1 fois par semaine</option>
+          <option value="2">J'ai oublié</option>
+          <option value="3">Femme</option>
+          <option value="4">C'est quoi une cuisse ?</option>
+          <option value="5">Homme</option>
+          <option value="6">Si vous proposez</option>
+        </select>
 
-            <li>
-                <label for="tel">Ton numéro de téléphone pour qu'on te rappel :</label>
-                <input type="tel" id="tel" name="tel" required placeholder="Ex : 06 12 34 56 78" />
-            </li>
+        <label for="paiement">Choisis ton moyen de paiement :</label>
+        <select required name="paiement" id="moyenPaiement">
+          <option classe="baseValue" value="baseValue">
+            ~~ Choisis ton moyen de paiement ~~
+          </option>
+          <option value="carte">Carte bancaire</option>
+          <option value="paypal">Paypal</option>
+          <option value="ecu">En plein de pièces de 1 centime</option>
+          <option value="nature">En nature</option>
+        </select>
 
-            <li>
-                <label for="text">Message à l'élève que tu vas reserver :</label>
-                <textarea id="text" name="text" rows="5" cols="33" placeholder="Un petit mot doux pour lui faire vachement plaisir !"></textarea>
-            </li>
+        <label for="tel">Ton numéro de téléphone pour qu'on te rappel :</label>
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          required
+          placeholder="Ex : 06 12 34 56 78"
+        />
 
-            <li class="checkB">
-                <label for="check">Accepter le fait qu'on soit les meilleurs et surtout nos <a class="checkBox" href="#"> conditions générales de vente</a></label>
-                <input type="checkbox" id="check" name="check" required>
-            </li>
-
-            <li>
-                <input type="submit"  id="submitButt" value="Reserver mon élève" />
-            </li>
-            </ul>
-
-        </form>
-        <div id="successPop" class="displayNone">
-           <div class="popUp">
-               <h2>Merci pour votre reservation</h2>
-               <p>Nous reviendrons vers vous aussi vite que speedy gonzales</p>
-               <a id="backHome" href="./../index.html">Retour à l'accueil</a>
-           </div>
+        <label for="text">Message à l'élève que tu vas reserver :</label>
+        <textarea
+          id="text"
+          name="text"
+          rows="5"
+          cols="33"
+          placeholder="Un petit mot doux pour lui faire vachement plaisir !"
+        ></textarea>
+        <div>
+          <label for="check"
+            >Accepter le fait qu'on soit les meilleurs et surtout nos
+            <a class="checkBox" href="#">
+              conditions générales de vente</a
+            ></label
+          >
+          <input type="checkbox" id="check" name="check" required />
         </div>
 
+        <input class="buttonHover" type="submit" id="submitButt" value="Reserver mon élève" />
+      </form>
+      <div id="successPop" class="displayNone">
+        <div class="popUp">
+          <h2>Merci pour votre reservation</h2>
+          <p>Nous reviendrons vers toi aussi vite que speedy gonzales</p>
+          <a id="backHome" href="./../../index.html">Retour à l'accueil</a>
+        </div>
+      </div>
 
-        <script>
-           function submitFormReturn(event){
-               event.preventDefault();
-               document.getElementById("successPop").classList.toggle("displayNone")
-           }
-        </script>
-
+      <script>
+        document.getElementById("backHome").addEventListener("click", () => {
+          document.getElementById("successPop").classList.toggle("displayNone");
+        });
+        function submitFormReturn(event) {
+          event.preventDefault();
+          document.getElementById("successPop").classList.toggle("displayNone");
+        }
+      </script>
     </main>
 
     <footer>
-        <article>
-            <section class="sectionFooter1">
-                <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="100px" width="100px"/></a>
-                <ul>
-                    <li><a href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13" target="_blank"><img src="./../../images/amazon.svg" alt=""/></a></li>
-                    <li><a href="https://www.instagram.com/cailloux_de_compagnie/" target="_blank"><img src="./../../images/instagram.svg" alt=""/></a></li>
-                    <li><a href="https://www.evian.com/fr/hydratation/" target="_blank"><img src="./../../images/water.svg" alt=""/></a></li>
-                    <li><a href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30" target="_blank"><img src="./../../images/youtube.svg" alt=""/></a></li>
- 
-                </ul>
-            </section>
-            <div></div>
-            <section class="sectionFooter2">
-                <h2>Approxinoscope</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit facere obcaecati error eligendi ipsam placeat deserunt fugiat. Aliquid odio nam qui blanditiis aperiam dolorum doloremque officiis, dicta ab aspernatur omnis!</p>
-            </section>
-            <div></div>
-            <section class="sectionFooter3">
-                <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Réservation</a></li>
-                </ul>
-                <div></div>
-                <ul class="ul2">
-                    <li><a href="">Mentions légales</a></li>
-                    <li><a href="">Conditions générales de vente</a></li>
-                </ul>
-                    
- 
-            </section>
-        </article>
-        <p class="copyright">© Tous droits réserves aux créateurs (les meilleurs)</p>
+      <div class="footerUp">
+        <div class="sectionFooter1 footerDiv">
+          <a href="./../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt="Logo du site Approxinoscope"
+              height="100px"
+              width="100px"
+          /></a>
+          <ul>
+            <li>
+              <a
+                href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13"
+                target="_blank"
+                ><img
+                  src="./../../images/amazon.svg"
+                  alt="Lien Amazon vers Mutations géopolitiques en mer noire"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/cailloux_de_compagnie/"
+                target="_blank"
+                ><img
+                  src="./../../images/instagram.svg"
+                  alt="Lien vers le compte Instagram Cailloux de Compagnie"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.evian.com/fr/hydratation/" target="_blank"
+                ><img
+                  src="./../../images/water.svg"
+                  alt="Lien vers la page hydratation d'Evian"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30"
+                target="_blank"
+                ><img
+                  src="./../../images/youtube.svg"
+                  alt="Lien vers la chanson Tunak Tunak Tun sur Youtube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter2 footerDiv">
+          <h2>Approxinoscope</h2>
+          <p>
+            Le trombinoscope décalé des élèves de seconde année en Bachelor WEB
+            & MULTIMÉDIA, où créativité rime avec audace !
+          </p>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter3 footerDiv">
+          <ul>
+            <li><a href="./../../index.html">Accueil</a></li>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+          </ul>
+          <div></div>
+          <ul class="ul2">
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Conditions générales de vente</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © Tous droits réserves aux créateurs (les meilleurs)
+      </p>
     </footer>
-</body>
+  </body>
 </html>
