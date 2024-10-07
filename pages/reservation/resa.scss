@@ -10,7 +10,7 @@ body {
   margin: 150px 0px -15px 0px;
 }
 
-p {
+main p {
   @include mainText(white);
   font-size: 20px;
   display: flex;
