@@ -368,6 +368,12 @@ h1 {
   font-family: "Fascinate Inline", system-ui;
   color: white;
 }
+.sectionEleve.sectionEleve1 ul li span {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 20px;
+}
 .sectionEleve.sectionEleve2 {
   flex-direction: column;
   width: 50%;
@@ -426,6 +432,8 @@ h1 {
   cursor: pointer;
   -webkit-transition: all 200ms ease 200ms;
   transition: all 200ms ease 200ms;
+  position: relative;
+  z-index: 10;
 }
 
 .slider::-webkit-slider-thumb:hover {
