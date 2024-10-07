@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A peu près les B2</title>
+    <link rel="stylesheet" href="./elevestyle.css" />
+    <link rel="icon" type="image/x-icon" href="./../../images/dog.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="desktopHeader">
+        <a class="headerLogo" href="./../../index.html"
+          ><img
+            src="./../../images/dog.svg"
+            alt=""
+            height="80px"
+            width="80px"
+            class="logoHeader"
+        /></a>
+        <a class="headerTitle buttonHover" href="./../../index.html"
+          >Approxinoscope</a
+        >
+        <ul>
+          <li>
+            <a class="buttonHover" href="./../../pages/faq/faq.html">FAQ</a>
+          </li>
+          <li>
+            <a
+              class="buttonHeader buttonHover"
+              href="./../../pages/reservation/reservation.html"
+              >Reserver</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobileHeader">
+        <div class="mobileHeaderUp">
+          <a href="./../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt=""
+              height="80px"
+              width="80px"
+              class="logoHeader"
+          /></a>
+          <a class="headerTitle" href="./../../index.html">Approxinoscope</a>
+          <img class="burgerHeader" src="./../../images/burger.svg" alt="" />
+        </div>
+        <div class="mobileHeaderDown displayNone">
+          <div></div>
+          <ul>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        const burger = document.querySelector(".burgerHeader");
+        burger.addEventListener("click", () => {
+          const mobileHeaderDown = document
+            .querySelector(".mobileHeaderDown")
+            .classList.toggle("displayNone");
+          burger.classList.toggle("rotate");
+        });
+      </script>
+    </header>
+    <main>
+      <div class="neonVertical"></div>
+      <h1>Réservez votre élève</h1>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve1">
+        <img src="./../../images/eleves/Arthur1.jpg" alt="" width="300px" />
+        <ul>
+          <li>Nom : Flamme</li>
+          <li>Prénom : Arthur</li>
+          <li>Age : Immortel</li>
+          <li>Prix : Nature</li>
+          <li>Service : Cours de cuisine avec fer à repasser suspendu à une falaise</li>
+        </ul>
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve2">
+        <h2>Description</h2>
+        <p>
+          Arthur, un être immortel, du moins selon sa propre logique imparable : tant qu’il n’est pas mort, il est vivant, donc techniquement immortel. Et qui pourrait contester une telle philosophie ? Mais ce n'est pas tout. Arthur mène aussi une double vie nocturne. Oui, c’est lui, Spooder-man. Enfin, presque… car il y a un léger détail : Arthur a une peur panique du vide. 
+        </p>
+        <p>
+          Si tout va bien au niveau du sol, dès qu'il dépasse le mètre de hauteur, c’est la catastrophe. Les toits de Gouthame ? Non merci. Un simple tabouret devient un Everest pour lui. Malgré ses escapades héroïques, Arthur préfère rester bien près du plancher des vaches pour assurer la sécurité de Gouthame sans trop se stresser. Immortel, mais pas imprudent, on va dire !
+        </p>
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve3">
+        <h2>Attribut</h2>
+        <label for=""> Peur du vide :</label>
+        <input type="range" class="slider" value="70" disabled />
+        <label for="">Secrètement Batman :</label>
+        <input type="range" class="slider" value="20" disabled />
+        <label for="">Fan de Lance Stroll :</label>
+        <input type="range" class="slider" value="90" disabled />
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve4">
+        <h2>Services</h2>
+        <p>
+          Envie de pimenter ta cuisine avec un peu d'adrénaline ? Arthur est là pour t’offrir un cours de cuisine… au fer à repasser, et suspendu à une falaise ! Pour un défi à couper le souffle, il surmontera sa peur du vide, les yeux bien fermés, pour te montrer l’art de cuisiner en haute voltige. 
+        </p>
+        <p>
+          Prépare-toi à découvrir des techniques inédites où chaque geste compte, surtout à 100 mètres du sol ! Si tu aimes la cuisine et les sensations fortes, ce cours est fait pour toi. Avec Arthur, c’est la garantie d’un repas à la hauteur (au sens propre comme au figuré) !
+        </p>
+        <a href="./../reservation/reservation.html" class="buttonHover"
+          >Réservez</a
+        >
+      </section>
+      <div class="neonVertical"></div>
+
+      <script>
+        const slider = document.querySelector(".slider::-webkit-slider-thumb");
+        const url = window.location.href.split("/");
+        const url2 = url[url.length - 1].replace(".html", "");
+        document.title = url2;
+
+        const style = document.createElement("style");
+        style.innerHTML = `.slider::-webkit-slider-thumb { background-image: url("./../../images/icon/${url2}.png"); }`;
+        document.head.appendChild(style);
+      </script>
+    </main>
+
+    <footer>
+      <div class="footerUp">
+        <div class="sectionFooter1 footerDiv">
+          <a href="./../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt="Logo du site Approxinoscope"
+              height="100px"
+              width="100px"
+          /></a>
+          <ul>
+            <li>
+              <a
+                href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13"
+                target="_blank"
+                ><img
+                  src="./../../images/amazon.svg"
+                  alt="Lien Amazon vers Mutations géopolitiques en mer noire"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/cailloux_de_compagnie/"
+                target="_blank"
+                ><img
+                  src="./../../images/instagram.svg"
+                  alt="Lien vers le compte Instagram Cailloux de Compagnie"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.evian.com/fr/hydratation/" target="_blank"
+                ><img
+                  src="./../../images/water.svg"
+                  alt="Lien vers la page hydratation d'Evian"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30"
+                target="_blank"
+                ><img
+                  src="./../../images/youtube.svg"
+                  alt="Lien vers la chanson Tunak Tunak Tun sur Youtube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter2 footerDiv">
+          <h2>Approxinoscope</h2>
+          <p>
+            Le trombinoscope décalé des élèves de seconde année en Bachelor WEB
+            & MULTIMÉDIA, où créativité rime avec audace !
+          </p>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter3 footerDiv">
+          <ul>
+            <li><a href="./../../index.html">Accueil</a></li>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+          </ul>
+          <div></div>
+          <ul class="ul2">
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Conditions générales de vente</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © Tous droits réserves aux créateurs (les meilleurs)
+      </p>
+    </footer>
+  </body>
+</html>
