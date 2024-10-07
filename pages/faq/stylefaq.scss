@@ -1,0 +1,88 @@
+@import "./../../style/style.scss";
+body{
+    background-image: url('./../../images/Approxinoscopefont.svg');
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+    font-family: $titleFont;
+    font-size: 70px;
+}
+h2{
+    text-align: center;
+    font-family: $mainFont;
+}
+
+.sectionFaq1{
+    @include neonBottom($colorPurple);
+    background-color:rgb(95, 7, 167) ;
+    border-radius: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+
+    h2{
+        text-decoration:underline;
+
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        li{
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+    
+    
+
+.sectionFaq2{
+
+    @include neonBottom($colorPurple);
+    background-color: rgb(95, 7, 167);
+    border-radius: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px;
+    
+    h2{
+        text-decoration:underline;
+
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .liFaq{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        li{
+            margin: 10px 0;
+           text-align: start;
+        }
+    } 
+}
+.buttonBackUp{
+    @include neonBottom($colorPurple);
+    @include button1();
+    background-color: rgb(95, 7, 167);
+    display: block;
+    width: fit-content;
+    margin: 100px auto;
+}
+
+
+

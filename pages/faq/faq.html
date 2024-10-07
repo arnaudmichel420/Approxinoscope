@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylefaq.css">
+    <title>A peu près les B2</title>
+</head>
+<body>
+    <header>
+        <div class="desktopHeader">
+            <a class="headerLogo" href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
+            <a class="headerTitle buttonHover" href="./index.html">Approxinoscope</a>
+            <ul>
+                <li><a class="buttonHover" href="#about">FAQ</a></li>
+                <li><a class="buttonHeader buttonHover" href="#contact">Reserver</a></li>
+            </ul>
+        </div>
+ 
+        <div class="mobileHeader">
+            <div class="mobileHeaderUp">
+                <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="80px" width="80px" class="logoHeader"/></a>
+                <a class="headerTitle" href="./index.html">Approxinoscope</a>
+                <img class="burgerHeader" src="./../../images/burger.svg" alt=""/>
+            </div>
+            <div class="mobileHeaderDown displayNone">
+                <div></div>
+                <ul>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Réservation</a></li>
+                    <li><a href="">Page 3</a></li>
+                </ul>
+            </div>
+ 
+        </div>
+        <script>
+            const burger = document.querySelector('.burgerHeader');
+            burger.addEventListener('click',()=>{
+                const mobileHeaderDown = document.querySelector('.mobileHeaderDown').classList.toggle("displayNone");
+                burger.classList.toggle("rotate");
+            })
+        </script>
+    </header>
+
+   <main>
+    <h1 id="haut">Besoin de précisions ?</h1>
+    <h2>N’hésitez pas à poser la question</h2>
+    <section class="sectionFaq1">
+        <h2>Les 5 questions les plus posées</h2>
+        <ul>
+            <li><a href="#question1">Ces services sont-ils sérieux ?
+            </a></li>
+            <li><a href="#question2">Puis-je réserver plusieurs camarades en même temps ?</a></li>
+            <li><a href="#question3">Comment sont fixés les prix des services ?</a></li>
+            <li><a href="#question4">Est-ce que je peux offrir un service en cadeau ?</a></li>
+            <li><a href="#question5">Pourquoi choisir Aproxinoscope plutôt qu’une autre agence ?</a></li>
+
+
+        </ul>
+    </section>
+    <section class="sectionFaq2">
+        <h2>Toutes les questions</h2>
+            <ul>
+                <li class="liFaq">1. Qu'est-ce qu'Aproxinoscope ?</li>
+                <li>Aproxinoscope est une agence totalement décalée qui propose des services basés sur les talents particuliers de 18 camarades de classe. Le concept ? Chaque service reflète une caractéristique unique et souvent excentrique de nos amis. Vous ne trouverez jamais ça ailleurs, c'est promis !
+                </li>
+                <li class="liFaq">2. Comment ça fonctionne ?</li>
+                <li>Vous choisissez un camarade, puis son talent vous est livré sous forme de service. Que ce soit l'art d'arriver en retard ou la maîtrise des jeux de mots pourris, chaque prestation est soigneusement pensée pour être aussi authentique qu'amusante. Nous nous occupons du reste !</li>
+                <li id="question1" class="liFaq">3. Ces services sont-ils sérieux ?</li>
+                <li>Oui et non. Les services sont fournis avec toute la rigueur et l'application possibles... mais basés sur des talents un peu hors du commun. Si vous cherchez du sérieux traditionnel, ce n’est peut-être pas pour vous. Mais pour une bonne dose de rire, vous êtes au bon endroit !</li>
+                <li class="liFaq">4. Qui sont ces camarades de classe ?</li>
+                <li>Ils sont 18, pleins de talents... ou plutôt de traits de caractère marquants. Certains sont experts dans l'art de la procrastination, d'autres dans celui de poser des questions sans fin. Mais tous sont uniques, attachants et prêts à vous offrir une expérience mémorable.</li>
+                <li class="liFaq">5. Puis-je personnaliser les services proposés ?</li>
+                <li>Nos services sont déjà ultra personnalisés, car ils sont entièrement basés sur la personnalité de nos camarades. Mais vous ne pouvez pas vraiment ajuster la prestation : c’est comme commander un plat unique au restaurant, vous dégustez tel quel et vous en profitez à fond !</li>
+                <li class="liFaq">6. Que se passe-t-il si je ne suis pas satisfait ?</li>
+                <li>S’il vous arrive de ne pas être satisfait, c’est sûrement que vous n’avez pas assez apprécié la subtilité du service ! Mais ne vous inquiétez pas : l'expérience est tellement inédite qu'elle finira toujours par vous arracher un sourire... même si c’est plus tard !</li>
+                <li id="question2" class="liFaq">7. Puis-je réserver plusieurs camarades en même temps ?</li>
+                <li>Absolument, mais préparez-vous à gérer une vague de personnalités ! Mélanger plusieurs talents peut produire des résultats chaotiques, mais cela fait partie du fun. Alors si vous aimez le désordre et les surprises, c’est une excellente option pour booster votre expérience !</li>
+                <li class="liFaq">8. Les services sont-ils garantis ?</li>
+                <li>Nous garantissons une chose : l’expérience sera unique. Vous repartirez avec des anecdotes à raconter, des moments mémorables, et peut-être même un fou rire incontrôlable. Mais pour ce qui est du reste, la magie réside dans l’inattendu. On vous promet juste que vous ne vous ennuierez pas !</li>
+                <li class="liFaq">9. Est-ce que les camarades sont vraiment prêts à tout ?</li>
+                <li>Ils sont prêts à beaucoup de choses, dans la limite du raisonnable… ou presque ! Tant que ça leur permet de briller dans leur domaine de prédilection, ils feront tout pour vous surprendre et vous faire vivre un moment unique. Mais ils ne sont pas magiciens... enfin, pas encore !</li>
+                <li id="question3" class="liFaq">10. Comment sont fixés les prix des services ?</li>
+                <li>Les prix sont calculés en fonction de l'originalité et de la rareté du talent proposé. Plus la prestation est farfelue, plus elle vaut son pesant de cacahuètes ! Mais rassurez-vous, chaque service est un excellent investissement pour votre santé mentale grâce à la bonne dose de rire qu’il procure.</li>
+                <li class="liFaq">11. Combien de temps dure chaque service ?</li>
+                <li>La durée dépend totalement du service. Certains talents comme "l'art de faire traîner les choses" peuvent durer une éternité, tandis que d'autres comme "la mauvaise synchronisation" peuvent commencer... quand vous ne vous y attendez pas. Chaque expérience est unique !</li>
+                <li id="question4" class="liFaq">12. Est-ce que je peux offrir un service en cadeau ?</li>
+                <li>Bien sûr ! Offrir un service Aproxinoscope, c'est comme offrir un moment de folie à vos amis. Que ce soit pour un anniversaire ou juste pour surprendre quelqu’un, vous serez sûr de marquer les esprits avec un cadeau qui sort de l’ordinaire, et qui sera forcément inoubliable !</li>
+                <li class="liFaq">13. Puis-je rencontrer les camarades avant de réserver ?</li>
+                <li>Vous pouvez, mais attention : la rencontre pourrait être aussi surprenante que le service lui-même ! Nos camarades sont des personnalités uniques, et leur charisme naturel fait déjà partie de l'expérience. Pourquoi ne pas garder la surprise pour le grand jour et plonger dans l'inconnu ?</li>
+                <li class="liFaq">14. Aproxinoscope est-il disponible dans toute la France ?</li>
+                <li>On aimerait bien vous dire que nos talents voyagent dans tout le pays, mais ils ont encore un peu de mal à quitter leur zone de confort. Cependant, si vous êtes dans le bon périmètre, nos camarades se feront un plaisir de venir jusqu’à vous pour délivrer leur talent incomparable !</li>
+                <li class="liFaq">15. Puis-je annuler ma réservation ?</li>
+                <li>Vous pouvez annuler, mais vous ratez une expérience que vous ne retrouverez nulle part ailleurs. Imaginez manquer l’occasion d’assister à un "retard légendaire" ou un "cours de mauvaise foi". Mais si vous devez annuler, faites-le vite avant que nos camarades ne commencent à se préparer mentalement !</li>
+                <li class="liFaq">16. Quels sont les services les plus populaires ?</li>
+                <li>Nos classiques incluent des services inimitables tels que "répondre à tout avec des jeux de mots" ou "s'endormir dans n'importe quelle situation". Ces talents sont très demandés pour leur capacité à transformer n’importe quel moment en situation aussi absurde qu’inoubliable !</li>
+                <li class="liFaq">17. Comment savoir quel service choisir ?</li>
+                <li>Faites confiance à votre instinct... ou laissez le hasard décider pour vous ! Chaque service a son charme, et peu importe celui que vous choisissez, vous ne serez jamais déçu. Le véritable plaisir vient de la découverte et de l’expérience unique qui en résulte !</li>
+                <li class="liFaq">18. Les camarades sont-ils professionnels ?</li>
+                <li>Disons qu’ils sont des experts dans leur domaine... peu conventionnel ! Ils ne sont peut-être pas diplômés dans les disciplines habituelles, mais ils sont de véritables maîtres dans leur spécialité, qu’il s’agisse de semer la confusion ou d’être imprévisibles. La qualité est dans l'authenticité !</li>
+                <li class="liFaq">19. Peut-on choisir plusieurs services d'une même personne ?</li>
+                <li>Oui ! Si vous trouvez qu'une personnalité correspond parfaitement à vos besoins, vous pouvez opter pour plusieurs de leurs talents. Par exemple, un camarade peut être expert en "discussion sans fin" et en "commentaire inutile". L'expérience sera riche et variée avec une seule personne !</li>
+                <li id="question5" class="liFaq">20. Pourquoi choisir Aproxinoscope plutôt qu’une autre agence ?</li>
+                <li>Parce qu'il n'y a rien de comparable ! Aproxinoscope, c’est la seule agence qui transforme les traits de personnalité en véritables services, avec un zeste d’humour et une dose d'originalité. Choisir Aproxinoscope, c'est choisir de vivre une expérience unique qui ne ressemble à aucune autre !</li>
+            </ul>
+        
+    </section>
+    <a href="#haut" class="buttonBackUp">Retour en Haut
+       
+    </a>
+
+   </main>
+   <footer>
+    <article>
+        <section class="sectionFooter1">
+            <a href="./index.html"><img src="./../../images/dog.svg" alt="" height="100px" width="100px"/></a>
+            <ul>
+                <li><a href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13" target="_blank"><img src="./../../images/amazon.svg" alt=""/></a></li>
+                <li><a href="https://www.instagram.com/cailloux_de_compagnie/" target="_blank"><img src="./../../images/instagram.svg" alt=""/></a></li>
+                <li><a href="https://www.evian.com/fr/hydratation/" target="_blank"><img src="./../../images/water.svg" alt=""/></a></li>
+                <li><a href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30" target="_blank"><img src="./../../images/youtube.svg" alt=""/></a></li>
+
+            </ul>
+        </section>
+        <div></div>
+        <section class="sectionFooter2">
+            <h2>Approxinoscope</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit facere obcaecati error eligendi ipsam placeat deserunt fugiat. Aliquid odio nam qui blanditiis aperiam dolorum doloremque officiis, dicta ab aspernatur omnis!</p>
+        </section>
+        <div></div>
+        <section class="sectionFooter3">
+            <ul>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Réservation</a></li>
+            </ul>
+            <div></div>
+            <ul class="ul2">
+                <li><a href="">Mentions légales</a></li>
+                <li><a href="">Conditions générales de vente</a></li>
+            </ul>
+                
+
+        </section>
+        
+    </article>
+    <p class="copyright">© Tous droits réserves aux créateurs (les meilleurs)</p>
+</footer>
+
+
+</body>
+</html>
