@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A peu près les B2</title>
+    <link rel="stylesheet" href="./elevestyle.css" />
+    <link rel="icon" type="image/x-icon" href="./../../images/dog.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="desktopHeader">
+        <a class="headerLogo" href="./../../index.html"
+          ><img
+            src="./../../images/dog.svg"
+            alt=""
+            height="80px"
+            width="80px"
+            class="logoHeader"
+        /></a>
+        <a class="headerTitle buttonHover" href="./../../index.html"
+          >Approxinoscope</a
+        >
+        <ul>
+          <li><a class="buttonHover" href="./../../pages/faq/faq.html">FAQ</a></li>
+          <li>
+            <a class="buttonHeader buttonHover" href="./../../pages/reservation/reservation.html">Reserver</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobileHeader">
+        <div class="mobileHeaderUp">
+          <a href="./../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt=""
+              height="80px"
+              width="80px"
+              class="logoHeader"
+          /></a>
+          <a class="headerTitle" href="./../../index.html">Approxinoscope</a>
+          <img class="burgerHeader" src="./../../images/burger.svg" alt="" />
+        </div>
+        <div class="mobileHeaderDown displayNone">
+          <div></div>
+          <ul>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+          </ul>
+        </div>
+      </div>
+      <script>
+        const burger = document.querySelector(".burgerHeader");
+        burger.addEventListener("click", () => {
+          const mobileHeaderDown = document
+            .querySelector(".mobileHeaderDown")
+            .classList.toggle("displayNone");
+          burger.classList.toggle("rotate");
+        });
+      </script>
+    </header>
+    <main>
+      <div class="neonVertical"></div>
+      <h1>Réservez votre élève</h1>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve1">
+        <img src="./../../images/eleves/Joey1.jpg" alt="" width="300px" />
+        <ul>
+          <li>Nom : DECROIX</li>
+          <li>Prénom : Joey</li>
+          <li>Age : entre 16 et 30 ans</li>
+          <li>Prix : 30€</li>
+          <li>Services : Faire un repas douteux </li>
+        </ul>
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve2">
+        <h2>Description</h2>
+        <p>
+          Joey, un jeune homme qui a entre 16 et 30 ans, incarne l'esprit bohème des plages. Ses cheveux blonds, souvent ébouriffés par le vent marin, encadrent un visage hâlé par le soleil. Son corps athlétique, sculpté par les sessions de callisthénie. 
+        </p>
+        <p>Quand il n'est pas en train de dompter les vagues, Joey se transforme en chef cuisinier hors pair. Torse nu, il manie les épices et les couteaux avec une dextérité surprenante, concoctant des plats exotiques aux saveurs qu’on vous laissera découvrir. Ses amis l'admirent pour sa capacité à grimper aux cocotiers pour en faire tomber les fruits.        </p>
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve3">
+        <h2>Attribut</h2>
+        <label for=""> Cuisine torse-nu :</label>
+        <input type="range" class="slider" value="70" disabled />
+        <label for="">Cueillir des coco à la main :</label>
+        <input type="range" class="slider" value="90" disabled />
+        <label for="">Son corps :</label>
+        <input type="range" class="slider" value="70" disabled />
+      </section>
+      <div class="neonVertical"></div>
+      <section class="sectionEleve sectionEleve4">
+        <h2>Services</h2>
+        <p>
+          Envie d'une expérience culinaire inoubliable ? Joey est là pour te servir… enfin, presque ! Pour seulement 30€ la demi-assiette, découvre ses créations gastronomiques dignes de Cauchemar en cuisine, préparées avec passion (et un peu de sueur). 
+        </p>
+        <p>Oui, oui, il cuisine torse-nu sous son tablier – l’ingrédient secret, c’est probablement l’adrénaline que tu ressentiras en croquant dans ses plats ! Saveurs mystérieuses, textures improbables, et une présentation qui défie les lois de l’esthétique : tout est là pour te surprendre. Avis aux courageux : il n’y a pas de garantie de goût… mais tu ne vivras ça nulle part ailleurs !
+        </p>
+        <a href="./../reservation/reservation.html" class="buttonHover">Réservez</a>
+      </section>
+      <div class="neonVertical"></div>
+
+      <script>
+        const slider = document.querySelector(".slider::-webkit-slider-thumb");
+        const url = window.location.href.split("/");
+        const url2 = url[url.length - 1].replace(".html", "");
+        document.title = url2;
+
+        const style = document.createElement("style");
+        style.innerHTML = `.slider::-webkit-slider-thumb { background-image: url("./../../images/icon/${url2}.png"); }`;
+        document.head.appendChild(style);
+      </script>
+    </main>
+
+    <footer>
+      <div class="footerUp">
+        <div class="sectionFooter1 footerDiv">
+          <a href="./../../index.html"
+            ><img
+              src="./../../images/dog.svg"
+              alt="Logo du site Approxinoscope"
+              height="100px"
+              width="100px"
+          /></a>
+          <ul>
+            <li>
+              <a
+                href="https://www.amazon.fr/Mutations-g%C3%A9opolitiques-en-mer-noire/dp/B09YN7GT3P/ref=sr_1_13?crid=3RRJ9MFWXU3MS&dib=eyJ2IjoiMSJ9.8LgK8FqzjNBGkJCQdt3bn6ZgDAaHnUWfusuzbDf2uOkwRte90VzgMIlHxCYsHVLc_H7Hcr0Yu1TmGIMpzoL0C7ibIMUbIk7OKCKmCeEFM2rKibt-DsKlQZ6KIlMwRFdDZG_W25gOBnoYdgZDAmzBe00NsSWWnFkwXkaU86e_PqP8yYSWNEKzJKEMdnCrkM4YzdPc_yQmOQKROSZTXIL1EM03a3a86G7o79i9v50AKc4jBbB08STPHeg0MOTcUq2V57O7jpqt9TovWjtd1eC80xPEoDFrhfiRACGlQZX0Bas.pc4gSQsXGU8JDUmsj7ycyW9BSa9GSLXg2BMRPnywUcQ&dib_tag=se&keywords=g%C3%A9opolitique+des+mers&qid=1727117684&sprefix=g%C3%A9opolitique+%2Caps%2C99&sr=8-13"
+                target="_blank"
+                ><img
+                  src="./../../images/amazon.svg"
+                  alt="Lien Amazon vers Mutations géopolitiques en mer noire"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/cailloux_de_compagnie/"
+                target="_blank"
+                ><img
+                  src="./../../images/instagram.svg"
+                  alt="Lien vers le compte Instagram Cailloux de Compagnie"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.evian.com/fr/hydratation/" target="_blank"
+                ><img
+                  src="./../../images/water.svg"
+                  alt="Lien vers la page hydratation d'Evian"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://youtu.be/IFP3Jc5ztgg?si=ShGHuDDnmZZ5Brfv&t=30"
+                target="_blank"
+                ><img
+                  src="./../../images/youtube.svg"
+                  alt="Lien vers la chanson Tunak Tunak Tun sur Youtube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter2 footerDiv">
+          <h2>Approxinoscope</h2>
+          <p>
+            Le trombinoscope décalé des élèves de seconde année en Bachelor WEB
+            & MULTIMÉDIA, où créativité rime avec audace !
+          </p>
+        </div>
+        <div class="line"></div>
+        <div class="sectionFooter3 footerDiv">
+          <ul>
+            <li><a href="./../../index.html">Accueil</a></li>
+            <li><a href="./../faq/faq.html">FAQ</a></li>
+            <li><a href="./../reservation/reservation.html">Réservation</a></li>
+          </ul>
+          <div></div>
+          <ul class="ul2">
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Conditions générales de vente</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © Tous droits réserves aux créateurs (les meilleurs)
+      </p>
+    </footer>
+  </body>
+</html>
