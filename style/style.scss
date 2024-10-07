@@ -8,13 +8,13 @@ $colorPurple: #9747ff;
 $colorPurpleDark: rgb(95, 7, 167);
 $colorLightBlue: #3af4ff;
 
-@mixin mainText($fontColor) {
+@mixin mainText($fontColor: white) {
   font-size: 16px;
   font-family: $mainFont;
   color: $fontColor;
 }
 
-@mixin title($fontSize, $fontColor) {
+@mixin title($fontSize, $fontColor: white) {
   font-size: $fontSize;
   font-family: $titleFont;
   color: $fontColor;
@@ -80,6 +80,10 @@ li {
   list-style: none;
 }
 
+.buttonHover:hover {
+  transform: scale(1.1);
+}
+
 .desktopHeader {
   @include neonBottom($colorPurple);
   padding: 0;
@@ -101,7 +105,12 @@ li {
     width: calc(100% / 3);
     display: flex;
     justify-content: center;
-    @include title(42px, white);
+    @include title(42px);
+    transition: all 200ms ease 200ms;
+  }
+  .headerTitle:hover {
+    transform-origin: center center;
+    transform: scale(1.1);
   }
   ul {
     width: calc(100% / 3);
@@ -114,14 +123,14 @@ li {
     color: white;
     li {
       padding: 0 50px 0 0;
+      transition: all 200ms ease 200ms;
+    }
+    li:hover {
+      transform-origin: center center;
+      transform: scale(1.1);
     }
   }
 }
-
-.buttonHover:hover {
-  transform: scale(1.1);
-}
-
 .mobileHeaderUp {
   padding: 0;
   margin: 0;
@@ -132,7 +141,7 @@ li {
   justify-content: space-between;
   align-items: center;
   .headerTitle {
-    @include title(28px, white);
+    @include title(28px);
   }
   .burgerHeader {
     margin-right: 20px;
@@ -193,6 +202,9 @@ footer {
     background-color: $colorPurpleDark;
     display: flex;
     align-items: center;
+    li {
+      transition: all 200ms ease 200ms;
+    }
     .line {
       width: 2px;
       height: 80%;
@@ -205,6 +217,7 @@ footer {
       flex-direction: column;
       align-items: center;
       ul li:hover {
+        transform-origin: center center;
         transform: scale(1.1);
       }
     }
@@ -223,10 +236,10 @@ footer {
     }
     .sectionFooter2 {
       h2 {
-        @include title(40px, white);
+        @include title(40px);
       }
       p {
-        @include mainText(white);
+        @include mainText();
         text-align: center;
       }
     }
@@ -234,7 +247,7 @@ footer {
     .sectionFooter3 {
       ul {
         li {
-          @include title(24px, white);
+          @include title(24px);
           padding: 5px 0;
           text-align: center;
         }
@@ -246,7 +259,7 @@ footer {
         margin: 30px 0;
       }
       .ul2 li {
-        @include mainText(white);
+        @include mainText();
       }
     }
   }
@@ -254,7 +267,7 @@ footer {
     margin: 0;
     height: 50px;
     background-color: black;
-    @include mainText(white);
+    @include mainText();
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,5 +332,5 @@ footer {
 
 main {
   margin: 100px 100px;
-  @include mainText(white);
+  @include mainText();
 }

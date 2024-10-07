@@ -35,6 +35,10 @@ li {
   list-style: none;
 }
 
+.buttonHover:hover {
+  transform: scale(1.1);
+}
+
 .desktopHeader {
   border-bottom: 0.2rem solid white;
   box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747ff, 0 0 1rem white, 0 0 1rem #9747ff, 0 0 2rem white, 0 0 2rem #9747ff, 0 0 0.8rem #9747ff, 0 0 2.8rem #9747ff, 0 0 4rem #9747ff, 0 0 5rem #9747ff, 0 0 6rem #9747ff, inset 0 0 8rem #9747ff;
@@ -61,6 +65,11 @@ li {
   font-size: 42px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
+  transition: all 200ms ease 200ms;
+}
+.desktopHeader .headerTitle:hover {
+  transform-origin: center center;
+  transform: scale(1.1);
 }
 .desktopHeader ul {
   width: 33.3333333333%;
@@ -74,9 +83,10 @@ li {
 }
 .desktopHeader ul li {
   padding: 0 50px 0 0;
+  transition: all 200ms ease 200ms;
 }
-
-.buttonHover:hover {
+.desktopHeader ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
 }
 
@@ -156,6 +166,9 @@ footer .footerUp {
   display: flex;
   align-items: center;
 }
+footer .footerUp li {
+  transition: all 200ms ease 200ms;
+}
 footer .footerUp .line {
   width: 2px;
   height: 80%;
@@ -169,6 +182,7 @@ footer .footerUp .footerDiv {
   align-items: center;
 }
 footer .footerUp .footerDiv ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
 }
 footer .footerUp .sectionFooter1 ul {

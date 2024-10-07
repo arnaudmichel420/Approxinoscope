@@ -1,211 +1,206 @@
 @import "./style.scss";
-.presentation{
-    @include neonBottom($colorPurple);
-    margin: 0 auto 100px auto;
+.presentation {
+  @include neonBottom($colorPurple);
+  margin: 0 auto 100px auto;
+  background-color: $colorPurpleDark;
+  width: 70%;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    @include title(30px);
+  }
+  h2 {
+    @include title(24px);
+  }
+  div {
+    width: 48%;
+    p {
+      span {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  }
+  .presentationImage {
+    margin-left: 20px;
+    img {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
+h2,
+h3 {
+  @include title(50px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 50px;
+  column-gap: 50px;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  .cardMain {
+    width: 300px;
+    height: 400px;
     background-color: $colorPurpleDark;
-    width: 70%;
-    border-radius: 20px;
-    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    h1{
-        @include title(30px,white )
+    align-items: center;
+    z-index: 1;
+    img {
+      object-fit: cover;
+      width: 280px;
+      height: 300px;
+      border-radius: 10px;
     }
-    h2{
-        @include title(24px,white);
-
+    h2 {
+      @include title(30px);
+      letter-spacing: 2px;
+      margin: 20px 0 0 0;
     }
-    div{
-        width: 48%;
-        p{
-            span{
-                display: block;
-                font-weight: bold;
-                margin-top: 10px;
-            }
-        }
-        
-    } 
-    .presentationImage{
-        margin-left: 20px;
-        img{
-            object-fit:cover;
-            border-radius: 10px;
-        }
-        p{
-            text-align: center;
-        }
-    }
-
-}
-
-h2, h3{
-    @include title(50px,white);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-.cards{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 50px;
-    column-gap: 50px;
-    justify-items: center;
-}
-.card{
+  }
+  .cardSecond {
+    height: 0px;
+    width: 0px;
+    background-color: black;
+    border-top-right-radius: 70%;
+    border-bottom-right-radius: 10px;
     display: flex;
-    align-items: flex-end;
-    .cardMain{
-        width: 300px;
-        height: 400px;
-        background-color: $colorPurpleDark;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        
-        img{
-            object-fit: cover;
-            width: 280px;
-            height: 300px;
-            border-radius: 10px;
-        }
-        h2{
-            @include title(30px,white );
-            letter-spacing: 2px;
-            margin: 20px 0 0 0;
-        }
-
+    flex-direction: column;
+    justify-content: flex-end;
+    div {
+      background-color: white;
+      height: 1px;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 5px;
     }
-    .cardSecond{
-        height: 350px;
-        width: 250px;
-        background-color: black;
-        border-top-right-radius: 70%;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        div{
-            background-color: white;
-            height: 1px;
-            width: 60%;
-            margin: 0 auto;
-            margin-top:5px
-        }
-        h2{
-            @include title(20px,white);
-            margin: 20px 0px 0px 20px;
-            display: flex;
-        }
-        p{
-            margin: 15px 10px 15px 20px;
-            -webkit-box-orient: vertical;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            overflow: hidden;
-        }
-        ul{
-            width: 200px;
-        }
-        ul li{
-            list-style:disc;
-            list-style-position: inside;
-            padding: 10px 0px 10px 20px;
-        }
-        a{
-            @include button1($colorPurpleDark);
-            margin: 10px auto 20px auto;
-            
-        }
-        
-        transform: scale(0);
-        transform: translateX(-250px);
-        transition: all 500ms;
+    h2 {
+      @include title(20px);
+      margin: 20px 0px 0px 20px;
+      display: flex;
     }
-    .cardMain:hover + .cardSecond{
-        @include neonLeft($colorPurple);
-        transform: scale(1);
-        transform: translateX(0);
+    p {
+      margin: 15px 10px 15px 20px;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
     }
-    .cardSecond:hover{
-        @include neonLeft($colorPurple);
-        transform: scale(1);
-        transform: translateX(0);
+    ul {
+      width: 200px;
     }
-
-    
-    
-}
-.card:nth-child(1) .cardMain:hover img{
-    content: url("./../images/eleves/Amelie2.jpg");
-}
-.card:nth-child(2) .cardMain:hover img{
-    content: url("./../images/eleves/Antonin2.jpg");
-}
-.card:nth-child(3) .cardMain:hover img{
-    content: url("./../images/eleves/Arnaud2.jpg");
-}
-.card:nth-child(4) .cardMain:hover img{
-    content: url("./../images/eleves/Arthur2.jpg");
-}
-.card:nth-child(5) .cardMain:hover img{
-    content: url("./../images/eleves/Chiara2.jpg");
-}
-.card:nth-child(6) .cardMain:hover img{
-    content: url("./../images/eleves/Elise2.jpg");
-}
-.card:nth-child(7) .cardMain:hover img{
-    content: url("./../images/eleves/Imane2.jpg");
-}
-.card:nth-child(8) .cardMain:hover img{
-    content: url("./../images/eleves/Jade2.jpg");
-}
-.card:nth-child(9) .cardMain:hover img{
-    content: url("./../images/eleves/Joey2.jpg");
-}
-.card:nth-child(10) .cardMain:hover img{
-    content: url("./../images/eleves/Killian2.jpg");
-}
-.card:nth-child(11) .cardMain:hover img{
-    content: url("./../images/eleves/Lila2.jpg");
-}
-.card:nth-child(12) .cardMain:hover img{
-    content: url("./../images/eleves/Lou2.jpg");
-}
-.card:nth-child(13) .cardMain:hover img{
-    content: url("./../images/eleves/Margaux2.jpg");
-}
-.card:nth-child(14) .cardMain:hover img{
-    content: url("./../images/eleves/Mathys2.jpg");
-}
-.card:nth-child(15) .cardMain:hover img{
-    content: url("./../images/eleves/Maude2.jpg");
-}
-.card:nth-child(16) .cardMain:hover img{
-    content: url("./../images/eleves/Noah2.jpg");
-}
-.card:nth-child(17) .cardMain:hover img{
-    content: url("./../images/eleves/Quentin2.jpg");
-}
-.card:nth-child(18) .cardMain:hover img{
-    content: url("./../images/eleves/Simon2.jpg");
+    ul li {
+      list-style: disc;
+      list-style-position: inside;
+      padding: 10px 0px 10px 20px;
+    }
+    a {
+      @include button1($colorPurpleDark);
+      margin: 10px auto 20px auto;
+    }
+    transform: translateX(-250px) scale(0);
+    transition: all 500ms ease 100ms;
+  }
 }
 
-
-.slidecontainer{
-    width: 100%;
+.card:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 400px;
+}
+.card:hover .cardSecond {
+  height: 350px;
+  width: 250px;
+  @include neonLeft($colorPurple);
+  transform: scale(1);
+  transform: translateX(0);
 }
 
-#randomStudentButton{
-    @include button1($colorPurpleDark);
-    font-size: 20px;
-    text-transform: uppercase;
-    margin: 30px auto;
+.card:nth-child(1) .cardMain:hover img {
+  content: url("./../images/eleves/Amelie2.jpg");
+}
+.card:nth-child(2) .cardMain:hover img {
+  content: url("./../images/eleves/Antonin2.jpg");
+}
+.card:nth-child(3) .cardMain:hover img {
+  content: url("./../images/eleves/Arnaud2.jpg");
+}
+.card:nth-child(4) .cardMain:hover img {
+  content: url("./../images/eleves/Arthur2.jpg");
+}
+.card:nth-child(5) .cardMain:hover img {
+  content: url("./../images/eleves/Chiara2.jpg");
+}
+.card:nth-child(6) .cardMain:hover img {
+  content: url("./../images/eleves/Elise2.jpg");
+}
+.card:nth-child(7) .cardMain:hover img {
+  content: url("./../images/eleves/Imane2.jpg");
+}
+.card:nth-child(8) .cardMain:hover img {
+  content: url("./../images/eleves/Jade2.jpg");
+}
+.card:nth-child(9) .cardMain:hover img {
+  content: url("./../images/eleves/Joey2.jpg");
+}
+.card:nth-child(10) .cardMain:hover img {
+  content: url("./../images/eleves/Killian2.jpg");
+}
+.card:nth-child(11) .cardMain:hover img {
+  content: url("./../images/eleves/Lila2.jpg");
+}
+.card:nth-child(12) .cardMain:hover img {
+  content: url("./../images/eleves/Lou2.jpg");
+}
+.card:nth-child(13) .cardMain:hover img {
+  content: url("./../images/eleves/Margaux2.jpg");
+}
+.card:nth-child(14) .cardMain:hover img {
+  content: url("./../images/eleves/Mathys2.jpg");
+}
+.card:nth-child(15) .cardMain:hover img {
+  content: url("./../images/eleves/Maude2.jpg");
+}
+.card:nth-child(16) .cardMain:hover img {
+  content: url("./../images/eleves/Noah2.jpg");
+}
+.card:nth-child(17) .cardMain:hover img {
+  content: url("./../images/eleves/Quentin2.jpg");
+}
+.card:nth-child(18) .cardMain:hover img {
+  content: url("./../images/eleves/Simon2.jpg");
 }
 
+.randomStudentButton {
+  @include button1($colorPurpleDark);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 30px auto;
+  cursor: pointer;
+  transition: all 200ms ease 200ms;
+}

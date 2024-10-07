@@ -35,9 +35,13 @@ li {
   list-style: none;
 }
 
+.buttonHover:hover {
+  transform: scale(1.1);
+}
+
 .desktopHeader {
   border-bottom: 0.2rem solid white;
-  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747ff, 0 0 1rem white, 0 0 1rem #9747ff, 0 0 2rem white, 0 0 2rem #9747ff, 0 0 0.8rem #9747ff, 0 0 2.8rem #9747ff, 0 0 4rem #9747ff, 0 0 5rem #9747ff, 0 0 6rem #9747ff, inset 0 0 8rem #9747ff;
   padding: 0;
   margin: 0;
   height: 100px;
@@ -61,6 +65,11 @@ li {
   font-size: 42px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
+  transition: all 200ms ease 200ms;
+}
+.desktopHeader .headerTitle:hover {
+  transform-origin: center center;
+  transform: scale(1.1);
 }
 .desktopHeader ul {
   width: 33.3333333333%;
@@ -74,9 +83,10 @@ li {
 }
 .desktopHeader ul li {
   padding: 0 50px 0 0;
+  transition: all 200ms ease 200ms;
 }
-
-.buttonHover:hover {
+.desktopHeader ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
 }
 
@@ -130,7 +140,7 @@ li {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
-  background-color: #001D32;
+  background-color: #001d32;
   overflow: hidden;
   height: 50px;
   z-index: -10;
@@ -156,6 +166,9 @@ footer .footerUp {
   display: flex;
   align-items: center;
 }
+footer .footerUp li {
+  transition: all 200ms ease 200ms;
+}
 footer .footerUp .line {
   width: 2px;
   height: 80%;
@@ -169,6 +182,7 @@ footer .footerUp .footerDiv {
   align-items: center;
 }
 footer .footerUp .footerDiv ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
 }
 footer .footerUp .sectionFooter1 ul {
@@ -211,13 +225,13 @@ footer .footerUp .sectionFooter3 .ul2 li {
   font-family: "Roboto", sans-serif;
   color: white;
 }
-footer .footerUp .copyright {
+footer .copyright {
   margin: 0;
   height: 50px;
   background-color: black;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: rgb(207, 207, 207);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +299,7 @@ main {
 
 .presentation {
   border-bottom: 0.2rem solid white;
-  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747ff, 0 0 1rem white, 0 0 1rem #9747ff, 0 0 2rem white, 0 0 2rem #9747ff, 0 0 0.8rem #9747ff, 0 0 2.8rem #9747ff, 0 0 4rem #9747ff, 0 0 5rem #9747ff, 0 0 6rem #9747ff, inset 0 0 8rem #9747ff;
   margin: 0 auto 100px auto;
   background-color: rgb(95, 7, 167);
   width: 70%;
@@ -325,7 +339,8 @@ main {
   text-align: center;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-size: 50px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
@@ -346,6 +361,7 @@ h2, h3 {
 .card {
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 .card .cardMain {
   width: 300px;
@@ -374,17 +390,16 @@ h2, h3 {
   margin: 20px 0 0 0;
 }
 .card .cardSecond {
-  height: 350px;
-  width: 250px;
+  height: 0px;
+  width: 0px;
   background-color: black;
   border-top-right-radius: 70%;
   border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transform: scale(0);
-  transform: translateX(-250px);
-  transition: all 500ms;
+  transform: translateX(-250px) scale(0);
+  transition: all 500ms ease 100ms;
 }
 .card .cardSecond div {
   background-color: white;
@@ -429,17 +444,22 @@ h2, h3 {
   transition: all 200ms;
   margin: 10px auto 20px auto;
 }
-.card .cardMain:hover + .cardSecond {
-  border-right: 0.2rem solid white;
-  border-top: 0.2rem solid white;
-  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
-  transform: scale(1);
-  transform: translateX(0);
+
+.card:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 400px;
 }
-.card .cardSecond:hover {
+
+.card:hover .cardSecond {
+  height: 350px;
+  width: 250px;
   border-right: 0.2rem solid white;
   border-top: 0.2rem solid white;
-  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
+  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747ff, 0 0 1rem white, 0 0 1rem #9747ff, 0 0 2rem white, 0 0 2rem #9747ff, 0 0 0.8rem #9747ff, 0 0 2.8rem #9747ff, 0 0 4rem #9747ff, 0 0 5rem #9747ff, 0 0 6rem #9747ff, inset 0 0 8rem #9747ff;
   transform: scale(1);
   transform: translateX(0);
 }
@@ -516,11 +536,7 @@ h2, h3 {
   content: url("./../images/eleves/Simon2.jpg");
 }
 
-.slidecontainer {
-  width: 100%;
-}
-
-#randomStudentButton {
+.randomStudentButton {
   border: 2px solid #fff;
   padding: 10px 20px;
   display: block;
@@ -535,4 +551,6 @@ h2, h3 {
   font-size: 20px;
   text-transform: uppercase;
   margin: 30px auto;
+  cursor: pointer;
+  transition: all 200ms ease 200ms;
 }/*# sourceMappingURL=styleaccueil.css.map */
