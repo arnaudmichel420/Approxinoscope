@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:active {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -35,6 +51,10 @@ li {
   list-style: none;
 }
 
+.buttonHover:hover {
+  transform: scale(1.1);
+}
+
 .desktopHeader {
   border-bottom: 0.2rem solid white;
   box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
@@ -42,7 +62,7 @@ li {
   margin: 0;
   height: 100px;
   width: 100%;
-  background-color: #9747FF;
+  background-color: rgb(95, 7, 167);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +70,9 @@ li {
 }
 .desktopHeader .headerLogo {
   width: 33.3333333333%;
-  padding-left: 50px;
+}
+.desktopHeader .headerLogo img {
+  margin-left: 50px;
 }
 .desktopHeader .headerTitle {
   width: 33.3333333333%;
@@ -59,6 +81,11 @@ li {
   font-size: 42px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
+  transition: all 200ms ease 200ms;
+}
+.desktopHeader .headerTitle:hover {
+  transform-origin: center center;
+  transform: scale(1.1);
 }
 .desktopHeader ul {
   width: 33.3333333333%;
@@ -72,11 +99,11 @@ li {
 }
 .desktopHeader ul li {
   padding: 0 50px 0 0;
+  transition: all 200ms ease 200ms;
 }
-
-.buttonHover:hover {
+.desktopHeader ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
-  display: flex;
 }
 
 .mobileHeaderUp {
@@ -84,7 +111,7 @@ li {
   margin: 0;
   height: 100px;
   width: 100%;
-  background-color: #9747FF;
+  background-color: rgb(95, 7, 167);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +135,7 @@ li {
   font-size: 20px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
-  background-color: #9747FF;
+  background-color: rgb(95, 7, 167);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,75 +152,102 @@ li {
   padding: 10px 0;
 }
 
-footer article {
+.newInfo {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: #001D32;
+  overflow: hidden;
+  height: 50px;
+  z-index: -10;
+  position: relative;
+}
+.newInfo p {
+  transform: translateX(100%);
+  white-space: nowrap;
+  animation: textDefile 25s linear infinite;
+}
+
+@keyframes textDefile {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+footer .footerUp {
   height: 300px;
-  background-color: #9747FF;
+  background-color: rgb(95, 7, 167);
   display: flex;
   align-items: center;
 }
-footer article div {
+footer .footerUp li {
+  transition: all 200ms ease 200ms;
+}
+footer .footerUp .line {
   width: 2px;
   height: 80%;
   background-color: white;
   margin: 0 20px;
 }
-footer article section {
+footer .footerUp .footerDiv {
   width: 33.3333333333%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer article section ul li:hover {
+footer .footerUp .footerDiv ul li:hover {
+  transform-origin: center center;
   transform: scale(1.1);
 }
-footer article .sectionFooter1 ul {
+footer .footerUp .sectionFooter1 ul {
   margin-top: 20px;
   display: flex;
 }
-footer article .sectionFooter1 ul li {
+footer .footerUp .sectionFooter1 ul li {
   padding: 0 25px;
   transform: scale(1.4);
 }
-footer article .sectionFooter1 ul li:hover {
+footer .footerUp .sectionFooter1 ul li:hover {
   transform: scale(1.6);
 }
-footer article .sectionFooter2 h2 {
+footer .footerUp .sectionFooter2 h2 {
   font-size: 40px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
 }
-footer article .sectionFooter2 p {
+footer .footerUp .sectionFooter2 p {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
   text-align: center;
 }
-footer article .sectionFooter3 ul li {
+footer .footerUp .sectionFooter3 ul li {
   font-size: 24px;
   font-family: "Fascinate Inline", system-ui;
   color: white;
   padding: 5px 0;
   text-align: center;
 }
-footer article .sectionFooter3 div {
+footer .footerUp .sectionFooter3 div {
   height: 2px;
   width: 50%;
   background-color: white;
   margin: 30px 0;
 }
-footer article .sectionFooter3 .ul2 li {
+footer .footerUp .sectionFooter3 .ul2 li {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
 }
-
-.copyright {
+footer .copyright {
   margin: 0;
   height: 50px;
   background-color: black;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  color: rgb(207, 207, 207);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,25 +257,25 @@ footer article .sectionFooter3 .ul2 li {
   .desktopHeader {
     display: none;
   }
-  footer article {
+  footer .footerUp {
     padding: 20px 0;
     flex-direction: column;
     height: -moz-fit-content;
     height: fit-content;
   }
-  footer article div {
+  footer .footerUp .line {
     width: 80%;
     height: 2px;
     background-color: white;
     margin: 20px 0;
   }
-  footer article section {
+  footer .footerUp .footerDiv {
     width: 100%;
   }
-  footer article section ul li:hover {
+  footer .footerUp .footerDiv ul li:hover {
     transform: scale(1.4);
   }
-  footer article section ul li:active {
+  footer .footerUp .footerDiv ul li:active {
     transform: scale(1.6);
   }
 }
@@ -232,10 +286,10 @@ footer article .sectionFooter3 .ul2 li {
   .desktopHeader .headerTitle {
     font-size: 30px;
   }
-  footer article .sectionFooter2 h2 {
+  footer .footerUp .sectionFooter2 h2 {
     font-size: 24px;
   }
-  footer article .sectionFooter1 ul li {
+  footer .footerUp .sectionFooter1 ul li {
     padding: 0 15px;
   }
 }
@@ -257,67 +311,6 @@ main {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
-}
-
-.card {
-  display: flex;
-  align-items: flex-end;
-}
-.card .cardMain {
-  width: 300px;
-  height: 400px;
-  background-color: #9747FF;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card .cardMain img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 280px;
-  height: 300px;
-  border-radius: 10px;
-}
-.card .cardMain h2 {
-  font-size: 30px;
-  font-family: "Fascinate Inline", system-ui;
-  color: white;
-  margin: 10px 0;
-}
-.card .cardSecond {
-  height: 350px;
-  width: 200px;
-  background-color: black;
-  border-top-right-radius: 70%;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  opacity: 0;
-  transition-duration: 1s;
-}
-.card .cardSecond ul li {
-  padding: 10px 20px;
-}
-.card .cardSecond button {
-  border: 0.2rem solid #fff;
-  padding: 10px 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 10px;
-  background-color: #3AF4FF;
-  margin: 20px;
-}
-.card .cardMain:hover + .cardSecond {
-  transition-duration: 1s;
-  opacity: 100;
-}
-.card .cardSecond:hover {
-  transition-duration: 1s;
-  opacity: 100;
 }
 
 body {
@@ -389,8 +382,6 @@ h2 {
 }
 
 .buttonBackUp {
-  border-bottom: 0.2rem solid white;
-  box-shadow: 0 0 0.2rem white, 0 0 0.2rem #9747FF, 0 0 1rem white, 0 0 1rem #9747FF, 0 0 2rem white, 0 0 2rem #9747FF, 0 0 0.8rem #9747FF, 0 0 2.8rem #9747FF, 0 0 4rem #9747FF, 0 0 5rem #9747FF, 0 0 6rem #9747FF, inset 0 0 8rem #9747FF;
   border: 0.2rem solid #fff;
   padding: 10px 20px;
   width: -moz-fit-content;
@@ -398,7 +389,11 @@ h2 {
   border-radius: 10px;
   background-color: #3AF4FF;
   background-color: rgb(95, 7, 167);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
   display: block;
   width: fit-content;
   margin: 100px auto;
+  transition: all 200ms ease 200ms;
 }/*# sourceMappingURL=stylefaq.css.map */
