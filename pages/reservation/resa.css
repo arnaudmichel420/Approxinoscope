@@ -326,7 +326,7 @@ body {
   margin: 150px 0px -15px 0px;
 }
 
-p {
+main p {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: white;
@@ -364,6 +364,7 @@ p {
   color: white;
   display: flex;
   justify-content: center;
+  text-align: center;
   margin: 100px 0px -15px 0px;
 }
 
