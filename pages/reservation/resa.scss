@@ -39,6 +39,7 @@ main p {
   @include title(50px, white);
   display: flex;
   justify-content: center;
+  text-align: center;
   margin: 100px 0px -15px 0px;
 }
 
