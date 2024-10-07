@@ -359,6 +359,9 @@ h1 {
 .sectionEleve.sectionEleve1 img {
   border-radius: 10px;
 }
+.sectionEleve.sectionEleve1 ul {
+  width: 300px;
+}
 .sectionEleve.sectionEleve1 ul li {
   margin: 10px 0;
   font-size: 24px;
