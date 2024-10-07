@@ -45,6 +45,10 @@ h1 {
       li {
         margin: 10px 0;
         @include title(24px);
+        span {
+          @include mainText();
+          font-size: 20px;
+        }
       }
     }
   }
@@ -98,6 +102,8 @@ h1 {
   background-repeat: no-repeat;
   cursor: pointer;
   transition: all 200ms ease 200ms;
+  position: relative;
+  z-index: 10;
 }
 
 .slider::-webkit-slider-thumb:hover {
