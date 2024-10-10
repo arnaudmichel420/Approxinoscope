@@ -85,7 +85,7 @@
       <form class="formulaire" onsubmit="submitFormReturn(event)">
         <label for="nom">Qui as-tu choisis ? </label>
         <select required name="nom" id="nom" required>
-          <option classe="baseValue" value="baseValue">
+          <option value="none" selected disabled>
             ~~ Choisis ton élève ~~
           </option>
           <option value="1">Amélie</option>
@@ -135,7 +135,7 @@
 
         <label for="sexe">Sexe ? </label>
         <select required name="sexe" id="sexe">
-          <option classe="baseValue" value="baseValue">
+          <option selected disabled value="none">
             ~~ Choisi ton sexe ~~
           </option>
           <option value="1">1 fois par semaine</option>
@@ -148,7 +148,7 @@
 
         <label for="paiement">Choisis ton moyen de paiement :</label>
         <select required name="paiement" id="moyenPaiement">
-          <option classe="baseValue" value="baseValue">
+          <option selected disabled value="none">
             ~~ Choisis ton moyen de paiement ~~
           </option>
           <option value="carte">Carte bancaire</option>

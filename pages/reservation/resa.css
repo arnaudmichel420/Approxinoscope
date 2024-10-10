@@ -410,7 +410,9 @@ main p {
   height: 30px;
   width: 90%;
   margin: 10px auto;
-  border: 1 solid black;
+  border: 1px solid black;
+  box-sizing: content-box;
+  padding: 5px 10px;
 }
 .formulaire #submitButt {
   border: 0.2rem solid #fff;
@@ -434,6 +436,7 @@ main p {
   height: 100px;
   resize: none;
   margin-bottom: 20px;
+  padding: 10px 10px;
 }
 .formulaire button {
   margin: 0 auto;
